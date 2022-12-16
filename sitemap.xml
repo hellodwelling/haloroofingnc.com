@@ -60,13 +60,6 @@
     </url>
 
     <url>
-        <loc>https://haloroofingnc.com/service-Residential-Roof-Replacement</loc>
-        <lastmod>2022-12-16</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://haloroofingnc.com/service-Siding-Installation</loc>
         <lastmod>2022-12-16</lastmod>
         <changefreq>weekly</changefreq>
@@ -82,6 +75,13 @@
 
     <url>
         <loc>https://haloroofingnc.com/service-Exterior-Painting</loc>
+        <lastmod>2022-12-16</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://haloroofingnc.com/service-Residential-Roof-Replacement</loc>
         <lastmod>2022-12-16</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
