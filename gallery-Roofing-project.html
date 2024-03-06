@@ -984,14 +984,19 @@
         data-heap-version="v2.1"
     >
         
-              
+            
             <div
-                class="flex gallery-hero-image  screen-height-minus-navbar  w-full bg-center bg-cover bg-fixed"
-                style="background-image: url('https://landing-page-app-hero-images.s3.amazonaws.com/media/3787c102-dc1c-4319-8938-135a0f87c268.jpeg')"
+                class="relative  screen-height-minus-navbar  flex w-full overflow-hidden items-center justify-center"
             >
+                <video
+                    id="hero-gallery-video"
+                    class="absolute  screen-height-minus-navbar  top-0 left-0 w-full object-cover" autoplay loop playsinline muted
+                >
+                    <source src="https://landing-page-app-hero-images.s3.amazonaws.com/media/" type = "" >
+                </video>
                 <main
                     style="--tw-bg-opacity:75%;"
-                    class="flex  screen-height-minus-navbar  justify-center m-auto w-full bg-primary"
+                    class="flex  screen-height-minus-navbar  relative justify-center m-auto w-full bg-primary"
                 >
                     <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
                         <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
@@ -1048,7 +1053,7 @@
 <div
     x-data="{
         activeImage: 0,
-        amountOfImages: 2,
+        amountOfImages: 0,
         next() {
             if (this.activeImage < this.amountOfImages - 1)
                 this.activeImage ++;
@@ -1065,58 +1070,6 @@
     data-heap-version="v2.1"
 >
     <ul role="list" class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="activeImage = 0; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/3787c102-dc1c-4319-8938-135a0f87c268.jpeg" alt="Roofing project for Halo Roofing &amp; Renovations in Benson, NC" loading="lazy" decoding="async"/>
-                                        
-                                    
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
-        
-            
-                <li x-cloak x-data="{ shown: false }" x-intersect.full="shown = true" class=" block ">
-                    <div x-show="shown" x-transition:enter="transition duration-1000" x-transition:enter-start="transform translate-y-20" x-transition:enter-end="transform translate-y-0">
-                        <button
-                            @click="activeImage = 1; galleryModalOpen = true"
-                            class="photo-tile block w-full h-full text-left rounded focus:outline-none focus-visible:ring focus:ring-0 focus:ring-offset-0"
-                        >
-                            
-                                <div class="aspect-w-3 aspect-h-2">
-                                    
-                                        
-                                            <img class="object-cover rounded-md shadow-lg hover:scale-110 transition duration-300 ease-in-out" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/500x500/filters:strip_exif()/filters:no_upscale()/media/0473921f-7cc5-45ec-a3da-ab622bc1d99d.jpeg" alt="Roofing project for Halo Roofing &amp; Renovations in Benson, NC" loading="lazy" decoding="async"/>
-                                        
-                                    
-                                </div>
-
-                                <div class="space-y-1 text-lg font-medium leading-6">
-                                    <p class="line-clamp-3"></p>
-                                    <h3 class="text-primary"></h3>
-                                </div>
-                            
-                        </button>
-                    </div>
-                </li>
-            
         
     </ul>
 
@@ -1160,24 +1113,6 @@
                             <span id="carousel-content-label" class="sr-only" hidden>Carousel</span>
 
                             <ul tabindex="0" role="listbox" aria-labelledby="carousel-content-label" class="relative w-3/4">
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 0">
-                                        
-                                            
-                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/3787c102-dc1c-4319-8938-135a0f87c268.jpeg" alt="Roofing project for Halo Roofing &amp; Renovations in Benson, NC" loading="lazy" decoding="async"/>
-                                                <p lorem="1" class="mt-3 text-gray-500"></p>
-                                            
-                                        
-                                    </li>
-                                
-                                    <li class="flex flex-col" x-show="activeImage === 1">
-                                        
-                                            
-                                                <img class="mt-2 lg:h-[481px] h-[200px] sm:h-[300px] self-center rounded-md object-cover"  src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/filters:strip_exif()/filters:no_upscale()/media/0473921f-7cc5-45ec-a3da-ab622bc1d99d.jpeg" alt="Roofing project for Halo Roofing &amp; Renovations in Benson, NC" loading="lazy" decoding="async"/>
-                                                <p lorem="1" class="mt-3 text-gray-500"></p>
-                                            
-                                        
-                                    </li>
                                 
                             </ul>
 
@@ -1416,7 +1351,7 @@
                                     <div class="flex flex-col space-y-2">
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="1501780" value="Residential Roof Replacement" id="mobile-contact-service-1501780" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="1501941" value="Residential Roof Replacement" id="mobile-contact-service-1501941" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Residential Roof Replacement
@@ -1424,7 +1359,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="1501781" value="Commercial Roof Replacement" id="mobile-contact-service-1501781" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="1501942" value="Commercial Roof Replacement" id="mobile-contact-service-1501942" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Commercial Roof Replacement
@@ -1432,7 +1367,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="1501782" value="Roofing Repairs" id="mobile-contact-service-1501782" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="1501943" value="Roofing Repairs" id="mobile-contact-service-1501943" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Roofing Repairs
@@ -1440,7 +1375,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="1501783" value="Seamless Gutter & Gutter Gaurds" id="mobile-contact-service-1501783" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="1501944" value="Seamless Gutter & Gutter Gaurds" id="mobile-contact-service-1501944" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Seamless Gutter & Gutter Gaurds
@@ -1448,7 +1383,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="1501784" value="Siding Installation" id="mobile-contact-service-1501784" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="1501945" value="Siding Installation" id="mobile-contact-service-1501945" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Siding Installation
@@ -1456,7 +1391,7 @@
                                         </div>
                                         
                                         <div class="flex items-center">
-                                            <input type="checkbox" name="1501785" value="Fortified Roofer" id="mobile-contact-service-1501785" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                            <input type="checkbox" name="1501946" value="Fortified Roofer" id="mobile-contact-service-1501946" class="mt-0.5 items-center w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                             />
                                             <span class="ml-3 items-start text-gray-600">
                                                 Fortified Roofer
@@ -1533,73 +1468,73 @@
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-1501780"
-                                        name="1501780"
+                                        id="contact-service-1501941"
+                                        name="1501941"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Residential Roof Replacement"
                                     />
-                                    <label for="contact-service-1501780" class="ml-3 text-sm font-normal text-gray-700">Residential Roof Replacement</label>
+                                    <label for="contact-service-1501941" class="ml-3 text-sm font-normal text-gray-700">Residential Roof Replacement</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-1501781"
-                                        name="1501781"
+                                        id="contact-service-1501942"
+                                        name="1501942"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Commercial Roof Replacement"
                                     />
-                                    <label for="contact-service-1501781" class="ml-3 text-sm font-normal text-gray-700">Commercial Roof Replacement</label>
+                                    <label for="contact-service-1501942" class="ml-3 text-sm font-normal text-gray-700">Commercial Roof Replacement</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-1501782"
-                                        name="1501782"
+                                        id="contact-service-1501943"
+                                        name="1501943"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Roofing Repairs"
                                     />
-                                    <label for="contact-service-1501782" class="ml-3 text-sm font-normal text-gray-700">Roofing Repairs</label>
+                                    <label for="contact-service-1501943" class="ml-3 text-sm font-normal text-gray-700">Roofing Repairs</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-1501783"
-                                        name="1501783"
+                                        id="contact-service-1501944"
+                                        name="1501944"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Seamless Gutter & Gutter Gaurds"
                                     />
-                                    <label for="contact-service-1501783" class="ml-3 text-sm font-normal text-gray-700">Seamless Gutter & Gutter Gaurds</label>
+                                    <label for="contact-service-1501944" class="ml-3 text-sm font-normal text-gray-700">Seamless Gutter & Gutter Gaurds</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-1501784"
-                                        name="1501784"
+                                        id="contact-service-1501945"
+                                        name="1501945"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Siding Installation"
                                     />
-                                    <label for="contact-service-1501784" class="ml-3 text-sm font-normal text-gray-700">Siding Installation</label>
+                                    <label for="contact-service-1501945" class="ml-3 text-sm font-normal text-gray-700">Siding Installation</label>
                                 </div>
                             
                                 
                                 <div class="flex items-center">
                                     <input
-                                        id="contact-service-1501785"
-                                        name="1501785"
+                                        id="contact-service-1501946"
+                                        name="1501946"
                                         type="checkbox"
                                         class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
                                         value="Fortified Roofer"
                                     />
-                                    <label for="contact-service-1501785" class="ml-3 text-sm font-normal text-gray-700">Fortified Roofer</label>
+                                    <label for="contact-service-1501946" class="ml-3 text-sm font-normal text-gray-700">Fortified Roofer</label>
                                 </div>
                             
                                 
