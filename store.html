@@ -66,19 +66,19 @@
   
   .hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/411b949d-62bc-450a-ae5f-0bc7ddb91c3e.png");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/cf3dc254-7416-460b-981b-b546c50776d3.jpeg");
+      background-image: url("");
       background-size: cover;
   }
   
   .final-cta-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/097f1340-a603-41d3-b8f5-42eb598e31a8.jpeg");
+      background-image: url("");
       background-size: cover;
   }
   
@@ -90,13 +90,13 @@
   
   .final-cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/675f3819-712c-45d1-a080-9cb657a1a64d.jpeg");
+      background-image: url("");
       background-size: cover;
   }
   
   .cta-image-if-slider {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/fit-in/1500x1500/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/7d584ecd-0619-492e-8ac9-eea03ac6c5bc.jpeg");
+      background-image: url("");
       background-size: cover;
   }
 </style>
@@ -1034,37 +1034,47 @@
         <section
                 data-heap-component-name="final-cta"
                 data-heap-version="v2.1"
-                class="flex final-cta-image two-thirds-screen-height w-full bg-center bg-cover custom_text_color text-white">
-                <div style="--tw-bg-opacity:75%;" class="flex flex-col items-center justify-center px-6 py-12 text-center sm:px-6 lg:py-16 lg:px-8 w-full bg-primary">
-                <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
-                    <span class="flex">Ready to get started?</span>
-                    <span class="flex">Book an appointment today.</span>
-                </h2>
-                <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
-                    
-                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
-                        <button 
-                            @click="contactModalOpen = true"
-                            class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
-                        >
-                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                            <span class="relative">Get a Free Quote</span>
-                        </button>
-                    </div> 
-                    
-                        
-                    
-                    <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
-                        <a
-                            target = "_blank" 
-                            href="tel:+19108501268"
-                            class="cta_call_conversion flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
-                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
-                            <span class="relative">Call Us</span>
-                        </a>
+                class="custom_text_color text-white">
+            <div
+                class="relative flex w-full overflow-hidden items-center justify-center h-[400px] sm:h-[800px]"
+            >
+                
+                <main
+                    style="--tw-bg-opacity:75%;"
+                    class="flex h-[400px] sm:h-[800px] relative justify-center m-auto w-full bg-primary"
+                >
+                    <div class="flex flex-col text-center justify-center items-center mx-8 sm:mx-auto sm:w-1/2">
+                        <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
+                            <span class="flex">Ready to get started?</span>
+                            <span class="flex">Book an appointment today.</span>
+                        </h2>
+                        <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
+                            
+                            <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
+                                <button 
+                                    @click="contactModalOpen = true"
+                                    class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
+                                >
+                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                                    <span class="relative">Get a Free Quote</span>
+                                </button>
+                            </div> 
+                            
+                                
+                            
+                            <div onclick="postCtaClick('call')" class=" mt-3 sm:mt-0">
+                                <a
+                                    target = "_blank" 
+                                    href="tel:+19108501268"
+                                    class="cta_call_conversion flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
+                                    <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                                    <span class="relative">Call Us</span>
+                                </a>
+                            </div>
+                            
+                        </div>
                     </div>
-                    
-                </div>
+                </main>
             </div>
         </section>
     
