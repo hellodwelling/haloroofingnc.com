@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://haloroofingnc.com/sitemap.xml
