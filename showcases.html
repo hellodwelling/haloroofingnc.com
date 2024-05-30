@@ -24,6 +24,7 @@
 
     <meta name="description" content="Halo Roofing &amp; Renovations is a roofing company located in Benson, NC &amp; Hampstead, NC that serves central &amp; coastal NC." />
     
+    
     <link rel="icon" href="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png" type="image/x-icon">
     
     <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
@@ -1301,6 +1302,27 @@
 <script id="projectShowcases" type="application/json">[]</script>
 
 <script>
+  function urlIsPhoto(photoUrl) {
+    return photoUrl.endsWith('.jpg') || photoUrl.endsWith('.jpeg') || photoUrl.endsWith('.png') || photoUrl.endsWith('.gif') || photoUrl.endsWith('.webp')
+  }
+  function renderHtmlString(isPhoto, url, classNames) {
+    let htmlString
+    if (isPhoto) {
+      htmlString = `<img style="${classNames}" src="${url}" alt="Showcase Photo"/>`
+    } else {
+      htmlString = (
+        `
+          <video style="${classNames}" autoplay loop playsinline muted>
+            <source src="${url}">
+          </video>
+        `
+      )
+    }
+    return htmlString
+  }
+</script>
+
+<script>
   async function initMap(service="All Services") {
       const showcasesArray = [];
 
@@ -1349,6 +1371,10 @@
       const modalHtml = getModalHtml(showcase, index);
 
       const isMobile = window.innerWidth <= 800;
+
+      const isPhoto = urlIsPhoto(featuredPhoto);
+      const classNames = "object-fit: cover; height: 100%; width: 100%;"
+      const imgHtml = renderHtmlString(isPhoto, featuredPhoto, classNames)
       
       const markerHtml = `
         <div id="marker-${index}" class="advanced-marker" style="transform: translate(0px, 40px);">
@@ -1359,8 +1385,10 @@
             onmouseout="this.style.borderColor='#545454'; document.querySelector('#marker-${index} svg path').setAttribute('fill', '#545454');"
           >
             ${featuredPhoto ? (
-              `<img style="object-fit: cover;" src="${featuredPhoto}" alt="Featured Photo"/>`
-            ) : `<div style="background-color: #545454;"></div>`}
+              imgHtml
+            ) : (
+              `<div style="background-color: #545454;"></div>`
+            )}
           </div>
           <svg style="bottom: -10px; left: ${isMobile ? "12px" : "29.5px"}; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#545454"/>
@@ -1446,10 +1474,14 @@
         </div>
       </div>`
 
+    const isPhoto = urlIsPhoto(featuredPhoto);
+    const classNames = "width: 100%; height: 180px; object-fit: cover;"
+    const imgHtml = renderHtmlString(isPhoto, featuredPhoto, classNames)
+
     const modalHtml = `
       <div @click="showcasesModalOpen = true;" onclick="setActiveShowcase('${showcase.url_slug}')" id="${modalId}" class="info-modal cursor-pointer border border-white rounded-lg overflow-hidden bg-white">
         ${featuredPhoto ? (
-          `<img style="width: 100%; height: 180px; object-fit: cover;" src="${featuredPhoto}" />`
+          imgHtml
         ) : `<div style="height: 40px; width: 100%; background-color: #545454;"></div>`}
         <div class="p-4">
           <div class="text-xs font-medium text-gray-900 flex w-full justify-between">
@@ -1461,7 +1493,7 @@
               </div>
               <div class="uppercase">${showcase.formatted_location}</div>
             </div>
-            <div class="uppercase font-normal">${showcase.created}</div>
+            <div class="uppercase font-normal">${showcase.project_date}</div>
           </div>
           <div style="line-height: 1.25;" class="text-lg font-bold text-primary pt-2 line-clamp-2">${showcase.title}</div>
           <div id="line-clamp-description" class="text-xs font-normal text-gray-600 line-clamp-1 pt-2">${showcase.detailed_description}</div>
@@ -1497,9 +1529,15 @@
 
   function get1PhotosDiv(showcase) {
     photos = showcase.photos
+    const photo = photos[0]
+
+    const isPhoto = urlIsPhoto(photo);
+    const classNames = "height: 100%; width: 100%; object-fit: cover; border-radius: 20px;"
+    const imgHtml = renderHtmlString(isPhoto, photo, classNames)
+    
     const photosSectionHtml = `
       <div class="one-photo-div mobile-photo-div" style="height: 400px; width: 100%; object-fit: cover;">
-        <img style="height: 100%; width: 100%; object-fit: cover; border-radius: 20px;" src=${photos[0]} alt="Featured Photo" />
+        ${imgHtml}
       </div>
     `
     return photosSectionHtml
@@ -1507,13 +1545,25 @@
 
   function get2PhotosDiv(showcase) {
     photos = showcase.photos
+    const photo1 = photos[0]
+    const photo2 = photos[1]
+
+    const isPhoto1 = urlIsPhoto(photo1);
+    const isPhoto2 = urlIsPhoto(photo2);
+
+    const classNames1 = "height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;"
+    const classNames2 = "height: 100%; width: 100%; border-radius: 0px 20px 20px 0px; object-fit: cover;"
+
+    const imgHtml1 = renderHtmlString(isPhoto1, photo1, classNames1)
+    const imgHtml2 = renderHtmlString(isPhoto2, photo2, classNames2)
+
     const photosSectionHtml = `
       <div style="height: 400px; width: 100%; object-fit: cover;" class="two-photo-div mobile-photo-div flex flex-row sm:space-x-1.5 space-x-1">
         <div style="height: 100%; width: 50%; object-fit: cover;">
-          <img style="height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div style="height: 100%; width: 50%; object-fit: cover;">
-          <img style="height: 100%; width: 100%; border-radius: 0px 20px 20px 0px; object-fit: cover;" src=${photos[1]} alt="Photo 2" />
+          ${imgHtml2}
         </div>
       </div>
     `
@@ -1522,30 +1572,47 @@
 
   function get3PhotosDiv(showcase, isMobile) {
     photos = showcase.photos
+
+    const photo1 = photos[0]
+    const photo2 = photos[1]
+    const photo3 = photos[2]
+
+    const isPhoto1 = urlIsPhoto(photo1);
+    const isPhoto2 = urlIsPhoto(photo2);
+    const isPhoto3 = urlIsPhoto(photo3);
+
+    const classNames1 = "height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;"
+    const classNames2 = "height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;"
+    const classNames3 = "height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;"
+
+    const imgHtml1 = renderHtmlString(isPhoto1, photo1, classNames1)
+    const imgHtml2 = renderHtmlString(isPhoto2, photo2, classNames2)
+    const imgHtml3 = renderHtmlString(isPhoto3, photo3, classNames3)
+
     const photosSectionHtml = `
       <div style="height: 400px;" class="three-photo-div hidden sm:flex sm:flex-row flex-col relative">
         <div style="object-fit: cover;" class="h-2/3 sm:h-full sm:w-3/4 w-full sm:pr-1.5 sm:pb-0 pb-1">
-          <img style="height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div class="flex flex-row sm:flex-col sm:h-full h-1/3"">
           <div class="sm:h-1/2 sm:w-full h-full w-1/2 sm:pb-1.5 pr-1" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;" src=${photos[1]} alt="Photo 2" />
+            ${imgHtml2}
           </div>
           <div class="sm:h-1/2 sm:w-full h-full w-1/2" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;" src=${photos[2]} alt="Photo 3" />
+            ${imgHtml3}
           </div>
         </div>
       </div>
       <div style="height: 300px;" class="mobile-photo-div flex sm:hidden flex-col relative">
         <div style="object-fit: cover;" class="h-2/3 sm:h-full sm:w-3/4 w-full sm:pr-1.5 sm:pb-0 pb-1">
-          <img style="height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div class="flex flex-row sm:flex-col sm:h-full h-1/3"">
           <div class="sm:h-1/2 sm:w-full h-full w-1/2 sm:pb-1.5 pr-1" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;" src=${photos[1]} alt="Photo 2" />
+            ${imgHtml2}
           </div>
           <div class="sm:h-1/2 sm:w-full h-full w-1/2" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;" src=${photos[2]} alt="Photo 3" />
+            ${imgHtml3}
           </div>
         </div>
       </div>
@@ -1555,35 +1622,59 @@
 
   function get4PhotosDiv(showcase, isMobile) {
     photos = showcase.photos
+
+    const photo1 = photos[0]
+    const photo2 = photos[1]
+    const photo3 = photos[2]
+    const photo4 = photos[3]
+
+    const isPhoto1 = urlIsPhoto(photo1);
+    const isPhoto2 = urlIsPhoto(photo2);
+    const isPhoto3 = urlIsPhoto(photo3);
+    const isPhoto4 = urlIsPhoto(photo4);
+
+    const classNames1 = "height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;"
+    const classNames2 = "height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;"
+    const classNames3 = "height: 100%; width: 100%; border-radius: 0px 0px 0px 0px; object-fit: cover;"
+    const classNames4 = "height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;"
+
+    const imgHtml1 = renderHtmlString(isPhoto1, photo1, classNames1)
+    const imgHtml2 = renderHtmlString(isPhoto2, photo2, classNames2)
+    const imgHtml3 = renderHtmlString(isPhoto3, photo3, classNames3)
+    const imgHtml4 = renderHtmlString(isPhoto4, photo4, classNames4)
+
+    const classNames5 = "height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;"
+    const imgHtml5 = renderHtmlString(isPhoto3, photo3, classNames5)
+
     const photosSectionHtml = `
       <div style="height: 400px;" class="four-photo-div hidden sm:flex flex-row">
         <div style="object-fit: cover;" class="sm:pr-1.5 pr-1 h-full w-1/2">
-          <img style="border-radius: 20px 0px 0px 20px; object-fit: cover;" class="h-full w-full" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div class="flex flex-col w-1/2 h-full">
           <div style="object-fit: cover;" class="sm:pb-1.5 pb-1 h-1/2 w-full">
-            <img style="border-radius: 0px 20px 0px 0px; object-fit: cover;" class="h-full w-full" src=${photos[1]} alt="Photo 2" />
+            ${imgHtml2}
           </div>
           <div class="flex flex-row h-1/2">
             <div style="object-fit: cover;" class="sm:pr-1.5 pr-1 h-full w-1/2">
-              <img style="border-radius: 0px 0px 0px 0px; object-fit: cover;" class="h-full w-full" src=${photos[2]} alt="Photo 3" />
+              ${imgHtml3}
             </div>
             <div style="object-fit: cover;" class="h-full w-1/2">
-              <img style="border-radius: 0px 0px 20px 0px; object-fit: cover;" class="h-full w-full" src=${photos[3]} alt="Photo 4" />
+              ${imgHtml4}
             </div>
           </div>
         </div>
       </div>
       <div style="height: 300px;" class="mobile-photo-div flex sm:hidden flex-col relative">
         <div style="object-fit: cover;" class="h-2/3 sm:h-full sm:w-3/4 w-full sm:pr-1.5 sm:pb-0 pb-1">
-          <img style="height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div class="flex flex-row sm:flex-col sm:h-full h-1/3"">
           <div class="sm:h-1/2 sm:w-full h-full w-1/2 sm:pb-1.5 pr-1" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;" src=${photos[1]} alt="Photo 2" />
+            ${imgHtml2}
           </div>
           <div class="sm:h-1/2 sm:w-full h-full w-1/2" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;" src=${photos[2]} alt="Photo 3" />
+            ${imgHtml5}
           </div>
         </div>
 
@@ -1604,25 +1695,52 @@
 
   function get5PhotosDiv(showcase, isMobile) {
     photos = showcase.photos
+
+    const photo1 = photos[0]
+    const photo2 = photos[1]
+    const photo3 = photos[2]
+    const photo4 = photos[3]
+    const photo5 = photos[4]
+
+    const isPhoto1 = urlIsPhoto(photo1);
+    const isPhoto2 = urlIsPhoto(photo2);
+    const isPhoto3 = urlIsPhoto(photo3);
+    const isPhoto4 = urlIsPhoto(photo4);
+    const isPhoto5 = urlIsPhoto(photo5);
+
+    const classNames1 = "height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;"
+    const classNames2 = "height: 100%; width: 100%; border-radius: 0px 0px 0px 0px; object-fit: cover;"
+    const classNames3 = "height: 100%; width: 100%; border-radius: 0px 0px 0px 0px; object-fit: cover;"
+    const classNames4 = "height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;"
+    const classNames5 = "height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;"
+
+    const imgHtml1 = renderHtmlString(isPhoto1, photo1, classNames1)
+    const imgHtml2 = renderHtmlString(isPhoto2, photo2, classNames2)
+    const imgHtml3 = renderHtmlString(isPhoto3, photo3, classNames3)
+    const imgHtml4 = renderHtmlString(isPhoto4, photo4, classNames4)
+    const imgHtml5 = renderHtmlString(isPhoto5, photo5, classNames5)
+    const imgHtml6 = renderHtmlString(isPhoto2, photo2, classNames4)
+    const imgHtml7 = renderHtmlString(isPhoto3, photo3, classNames5)
+
     const photosSectionHtml = `
       <div style="height: 400px" class="relative five-photo-div hidden sm:flex flex-row">
         <div style="height: 100%; width: 50%; object-fit: cover;" class="sm:pr-1.5 pr-1">
-          <img style="border-radius: 20px 0px 0px 20px; object-fit: cover;" class="h-full w-full" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div class="flex flex-col sm:pr-1.5 pr-1" style="width: 25%;">
           <div style="object-fit: cover;" class="sm:pb-1.5 pb-1 h-1/2 w-full">
-            <img style="border-radius: 0px 0px 0px 0px; object-fit: cover;" class="h-full w-full" src=${photos[1]} alt="Photo 2" />
+            ${imgHtml2}
           </div>
           <div style="object-fit: cover;" class="h-1/2 w-full">
-            <img style="border-radius: 0px 0px 0px 0px; object-fit: cover;" class="h-full w-full" src=${photos[2]} alt="Photo 3" />
+            ${imgHtml3}
           </div>
         </div>
         <div class="flex flex-col" style="width: 25%;">
           <div style="object-fit: cover;" class="sm:pb-1.5 pb-1 h-1/2 w-full">
-            <img style="border-radius: 0px 20px 0px 0px; object-fit: cover;" class="h-full w-full" src=${photos[3]} alt="Photo 4" />
+            ${imgHtml4}
           </div>
           <div style="object-fit: cover;" class="h-1/2 w-full">
-            <img style="border-radius: 0px 0px 20px 0px; object-fit: cover;" class="h-full w-full" src=${photos[4]} alt="Photo 5" />
+            ${imgHtml5}
           </div>
         </div>
 
@@ -1641,14 +1759,14 @@
       </div>
       <div style="height: 300px;" class="mobile-photo-div flex sm:hidden flex-col relative">
         <div style="object-fit: cover;" class="h-2/3 sm:h-full sm:w-3/4 w-full sm:pr-1.5 sm:pb-0 pb-1">
-          <img style="height: 100%; width: 100%; border-radius: 20px 0px 0px 20px; object-fit: cover;" src=${photos[0]} alt="Featured Photo" />
+          ${imgHtml1}
         </div>
         <div class="flex flex-row sm:flex-col sm:h-full h-1/3"">
           <div class="sm:h-1/2 sm:w-full h-full w-1/2 sm:pb-1.5 pr-1" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 20px 0px 0px; object-fit: cover;" src=${photos[1]} alt="Photo 2" />
+            ${imgHtml6}
           </div>
           <div class="sm:h-1/2 sm:w-full h-full w-1/2" style="object-fit: cover;">
-            <img style="height: 100%; width: 100%; border-radius: 0px 0px 20px 0px; object-fit: cover;" src=${photos[2]} alt="Photo 3" />
+            ${imgHtml7}
           </div>
         </div>
 
@@ -1678,7 +1796,7 @@
           </div>
           <div>${showcase.formatted_location}</div>
         </div>
-        <div class="font-normal">${showcase.created}</div>
+        <div class="font-normal">${showcase.project_date}</div>
       </div>
     `
     return headerDiv
@@ -1784,11 +1902,14 @@
     const photos = showcase.photos
     const allPhotosDiv = `
       <div class="flex flex-col space-y-1.5 w-full">
-        ${photos.map(photo => {
+        ${photos.map((photo) => {
+          const isPhoto = urlIsPhoto(photo);
+          const classNames = "height: 100%; width: 100%; object-fit: cover;"
+          const imgHtml = renderHtmlString(isPhoto, photo, classNames)
           return (
             `
               <div class="sm:h-96 h-56">
-                <img style="object-fit: cover; width: 100%; height: 100%;" src=${photo} />
+                ${imgHtml}
               </div>
             `
           );
@@ -1820,12 +1941,16 @@
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
   const featuredPhoto = showcase?.featured_photo ? showcase.featured_photo : '';
+
+  const isPhoto = urlIsPhoto(featuredPhoto);
+  const classNames = "object-fit: cover;"
+  const imgHtml = renderHtmlString(isPhoto, featuredPhoto, classNames)
   
   const markerHtml = `
     <div id="marker-in-modal">
       <div class="advanced-marker cursor-pointer overflow-hidden" style="background-color: white; border: 2px solid black; border-radius: 5px; transform: translate(0px, 40px);">
         ${featuredPhoto ? (
-          `<img style="object-fit: cover;" src="${featuredPhoto}" alt="Featured Photo"/>`
+          `${imgHtml}`
         ) : `<div style="background-color: #545454;"></div>`}
       </div>
       <svg style="bottom: -50px; left: 29.5px; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
