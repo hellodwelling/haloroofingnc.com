@@ -1161,6 +1161,7 @@
     opacity: 1;
     z-index: 1;
   }
+
   @media screen and (max-width: 800px) {
       .map-outer-container {
           height: calc(100vh - 176px);
@@ -1438,7 +1439,7 @@
             ${featuredPhoto ? (
               imgHtml
             ) : (
-              `<div style="background-color: #545454;"></div>`
+              `<img style="${classNames}" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png" />`
             )}
           </div>
           <svg style="bottom: -10px; left: ${isMobile ? "12px" : "29.5px"}; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1547,6 +1548,7 @@
             <div class="uppercase font-normal">${showcase.project_date}</div>
           </div>
           <div style="line-height: 1.25;" class="text-lg font-bold text-primary pt-2 line-clamp-2">${showcase.title}</div>
+          <div class="text-sm font-medium text-gray-900 line-clamp-1 pt-1">${showcase.subtitle}</div>
           <div id="line-clamp-description" class="text-xs font-normal text-gray-600 line-clamp-1 pt-2">${showcase.detailed_description}</div>
           ${showcase.review_id && reviewSection}
         </div>
@@ -2003,7 +2005,7 @@
       <div class="advanced-marker cursor-pointer overflow-hidden" style="background-color: white; border: 2px solid black; border-radius: 5px; transform: translate(0px, 40px);">
         ${featuredPhoto ? (
           `${imgHtml}`
-        ) : `<div style="background-color: #545454;"></div>`}
+        ) : `<img style="${classNames}" src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png" />`}
       </div>
       <svg style="bottom: -50px; left: 29.5px; position: absolute;" width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8.80874 9.88799C8.40939 10.4371 7.59061 10.4371 7.19127 9.88799L9.61651e-07 -1.39876e-06L16 0L8.80874 9.88799Z" fill="#545454"/>
