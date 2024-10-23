@@ -89,7 +89,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/16a3f054-be8d-4279-be47-64da37487ef9.png");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/7f69b8d3-56fb-46d0-bc38-f494f1f02e63.png");
       background-size: cover;
   }
   
@@ -563,6 +563,26 @@
 
                             </div>
                         
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" blog "
+                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'text-primary': true }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
                         
 
                     </div>
@@ -817,6 +837,17 @@
                                             href=" reviews "
                                             class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
                                             >Reviews</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
                                         >
                                     
                                     
