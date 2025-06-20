@@ -94,7 +94,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/7b74024a-6c0d-4464-9cff-e23640410519.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/4ae747e3-f148-4232-93f3-465792b2db07.mp4");
       background-size: cover;
   }
   
@@ -136,9 +136,15 @@
                 
                 autocomplete = new google.maps.places.Autocomplete(address1Field, {
                     componentRestrictions: { country: ["us", "ca"] },
-                    fields: ["address_components", "geometry"],
+                    fields: ["formatted_address", "address_components", "geometry"],
                     types: ["address"],
                 });
+                autocomplete.addListener("place_changed", () => {
+                    const place = autocomplete.getPlace();
+                    if(place.formatted_address) {
+                        address1Field.value = place.formatted_address;
+                    }
+                })
                 address1Field.focus();
             } catch (error) {
                 console.error("Error: ", error.message)

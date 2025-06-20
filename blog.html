@@ -94,7 +94,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/7b74024a-6c0d-4464-9cff-e23640410519.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/4ae747e3-f148-4232-93f3-465792b2db07.mp4");
       background-size: cover;
   }
   
@@ -136,9 +136,15 @@
                 
                 autocomplete = new google.maps.places.Autocomplete(address1Field, {
                     componentRestrictions: { country: ["us", "ca"] },
-                    fields: ["address_components", "geometry"],
+                    fields: ["formatted_address", "address_components", "geometry"],
                     types: ["address"],
                 });
+                autocomplete.addListener("place_changed", () => {
+                    const place = autocomplete.getPlace();
+                    if(place.formatted_address) {
+                        address1Field.value = place.formatted_address;
+                    }
+                })
                 address1Field.focus();
             } catch (error) {
                 console.error("Error: ", error.message)
@@ -1178,6 +1184,27 @@
             </h1>
 
             <div class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+                
+                    <div class="flex flex-col bg-white rounded-lg shadow-lg p-8 items-start">
+                        <div class="text-left text-sm text-gray-500">Jun 14, 2025</div>
+                        <div class="text-left text-xl text-gray-900 font-semibold mt-2">
+                            <a
+                                class="text-left text-xl text-gray-900 font-semibold"
+                                href="blog-revolutionizing-durability-halo-roofings-commitment"
+                            >
+                                Revolutionizing Durability: Halo Roofing’s Commitment to Long-Lasting Roofs
+                            </a>
+                        </div>
+                        <div class="text-left text-base text-gray-500 line-clamp-5 mt-4">In today&#x27;s world, the resilience and durability of one’s home are more critical than ever. When it comes to roofing, homeowners are seeking solutions that offer not just sustainability but a lifetime…</div>
+                        <div class="text-left mt-4 text-primary">
+                            <a
+                                class="text-primary font-semibold"
+                                href="blog-revolutionizing-durability-halo-roofings-commitment"
+                            >
+                                Read full post
+                            </a>
+                        </div>
+                    </div>
                 
                     <div class="flex flex-col bg-white rounded-lg shadow-lg p-8 items-start">
                         <div class="text-left text-sm text-gray-500">Jun 10, 2025</div>
