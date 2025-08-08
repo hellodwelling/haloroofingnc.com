@@ -18,10 +18,10 @@
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contact Us | Benson, NC | Halo Roofing &amp; Renovations</title>
+    <title>Benson, NC | Halo Roofing &amp; Renovations</title>
 
     
-        <link rel="canonical" href="https://haloroofingnc.com/success" />
+        <link rel="canonical" href="https://haloroofingnc.com/blog-eco-advancements-in-roofing-halo-roofings" />
     
 
     <meta name="description" content="Halo Roofing &amp; Renovations is a roofing company located in Benson, NC &amp; Hampstead, NC that serves central &amp; coastal NC." />
@@ -202,68 +202,1936 @@
     
 
     
-        
-        
 
-        <div
-	class="fixed inset-0 z-40"
-	id="text-thank-you"
-	data-heap-component-name="text_thank_you"
-	data-heap-version="v2.1"
+        
+            
+
+
+<nav
+    id="nav-bar"
+    x-ref="navbar"
+    x-data="{ scrolledFromTop: false, customNavTransparent:  false  }"
+    x-init="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false;"
+    @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+    class="w-screen fixed top-0 inset-x-0 z-50"
+    data-heap-component-name="navigation"
+    data-heap-version="v2.1"
 >
-	<div
-		class="fixed inset-0 bg-black bg-opacity-50"
-	></div>
-	<div
-		class="fixed flex h-screen w-screen inset-x-0 z-50 mx-auto justify-center items-center p-4 shadow-lg rounded-md bg-primary"
-	>
-		<div class="flex flex-col mt-3 text-center">
-			<div
-				class="mx-auto mb-3 flex items-center justify-center h-12 w-12 rounded-full bg-green-100"
-			>
-				<svg
-					class="h-6 w-6 text-green-600"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M5 13l4 4L19 7"
-					></path>
-				</svg>
-			</div>
-			<h3 class="sm:text-6xl text-4xl font-extrabold text-white sm:my-6 my-2">Message sent</h3>
-			<div class="p-2">
-				<p class="sm:text-xl text-sm text-gray-200">
-					We usually respond within a few minutes via SMS.
-				</p>
-			</div>
-		</div>
-	</div>
-</div>
-	
-<script>
-	function globalRedirect() {
-    const referrer = sessionStorage.getItem('referrer');
-    if (referrer === '/get-in-touch') {
-        sessionStorage.removeItem('referrer');
-        window.location.replace('get-in-touch')
-    } else {
-        window.location.replace('./')
-    }
-}
-	window.onload = function() {
-		setTimeout(() => {
 
-			globalRedirect();
-		}, 3000)
-	}
+    <div
+        x-data="{ navOpen: false, scrolledFromTop: false, mobileOpen: false }"
+        x-ref="nav_menu"
+        x-init="
+        window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false
+
+        const root = document.querySelector(':root');
+
+        const observer = new ResizeObserver(() => {
+            navbarHeight = calculateTopMargin ?
+                $refs.navbar.offsetHeight + 'px' :
+                $refs.navbar.offsetHeight - (customNavTransparent ? $refs.nav_menu.offsetHeight : 0) + 'px'
+
+            root.style.setProperty('--navbarHeight', navbarHeight);
+        });
+        observer.observe($refs.navbar);
+        "
+        @scroll.window="window.pageYOffset >= 50 ? scrolledFromTop = true : scrolledFromTop = false"
+        :class="{ 'translate-y-0 xl:h-44': !scrolledFromTop, 'shadow-magical': scrolledFromTop }"
+        class="relative transition-all duration-200  bg-white  h-24 xl:h-44"
+    >
+        <div class="h-full px-4 mx-auto transition duration-200 max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-full">
+                <div class="flex items-center">
+                    <div
+                        :class="{'scale-100': !scrolledFromTop, 'xl:scale-50': scrolledFromTop}"
+                        class="flex items-center h-full transition-all duration-200 origin-left"
+                    >
+                    
+                        <a
+                            href=" ./"
+                            class="flex items-center justify-center flex-shrink-0 pr-5  bg-white  rounded-md focus:ring-0 focus:ring-offset-0"
+                            
+                        >
+                        
+                            <picture>
+                                <source
+                                    type="image/webp" 
+                                    srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/320x320/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png 2x"
+                                >
+                                <img
+                                    class="h-[80px] xl:h-[150px] object-contain logo  sm:max-w-md "
+                                    src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png"
+                                    alt="Brand Logo"
+                                    width="160"
+                                    loading="auto"
+                                    fetchpriority="high"
+                                    decoding="auto"
+                                />
+                            </picture>
+                        
+                        </a>
+                    
+                    </div>
+                </div>
+
+
+                <div >
+                
+                     </div>
+                
+                <div
+                    class="flex flex-row items-center xl:hidden"
+                    :class="{ 'text-primary': true }"
+                >
+                    <span class="uppercase">Menu</span>
+                    <button @click="mobileOpen = !mobileOpen" class="p-2" aria-label="mobile menu button">
+                        <span hidden class="sr-only">Open/CLose menu TODO:</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="items-center hidden space-x-3 xl:flex">
+                    <div
+                        :class="{'h-16': !scrolledFromTop, 'h-16': scrolledFromTop}"
+                        class="hidden transition-all duration-200 xl:flex xl:space-x-5 mr-2"
+                    >
+
+                    
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" ./ "
+                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'text-primary': true }"
+                                    >
+                                        Home
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_2"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
+                                        :class="{  'hover:border-gray-300 hover:text-gray-700 text-primary': true }"
+                                    >
+                                        <span 
+                                            class="block py-5 "
+                                        >Services</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 transition-transform duration-300"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_2"
+                                        role="menu"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height: 80vh;">
+                                                
+                                                    <a
+                                                        href=" service-Residential-Roof-Replacement "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Residential Roof Replacement</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> If the roof on your home is starting to show signs of wear and tear, it may be time for a residential roof replacement. Our experienced team can help you choose the best products for your roof replacement  and install it quickly and efficiently. </p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" service-Commercial-Roof-Replacement "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Commercial Roof Replacement</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> If you are in need of a new roof, our team can help. We offer a wide range of services, from Commercial Roof Replacement to repairs and maintenance. We have the experience and expertise to get the job done right, on time and on budget. </p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" service-Roofing-Repairs "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Roofing Repairs</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> If you&#x27;re in need of roof repairs, our company offers a wide range of services to get your home back in shape. From shingle repair to full roof replacement, we&#x27;ll work with you to find the best solution for your home. </p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" service-Seamless-Gutter---Gutter-Gaurds "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Seamless Gutter &amp; Gutter Gaurds</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Our gutter installation service is a great way to keep the most crucial areas of your home protected from water damage. We can install gutters in any style you choose, and we&#x27;ll make sure we are properly fitted to your roofline. </p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" service-Siding-Installation "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Siding Installation</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> We are a full-service roofing company that also offers siding installation. We have a wide selection of siding options to choose from, and we will work with you to find the perfect style and color for your home. </p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" service-Fortified-Roofer "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Fortified Roofer</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"> Halo Roofing &amp; renovations Coastal Carolinas first choice for a fortified roofing system. Halo roofing we&#x27;ll treat your home like it&#x27;s our home. </p>-->
+                                                    </a>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <button
+                                        type="button"
+                                        aria-haspopup="true"
+                                        :aria-expanded="desktopOpen"
+                                        aria-controls="navitem_3"
+                                        @click="desktopOpen = !desktopOpen"
+                                        class="inline-flex items-center px-1 pt-6 pb-5 text-sm font-medium transition border-transparent focus:ring-0 focus:ring-offset-0 focus:outline-none group uppercase"
+                                        :class="{  'hover:border-gray-300 hover:text-gray-700 text-primary': true }"
+                                    >
+                                        <span 
+                                            class="block py-5 "
+                                        >Galleries</span>
+                                        <svg
+                                            class="w-5 h-5 ml-2 transition-transform duration-300"
+                                            :class="{ '-rotate-180': desktopOpen }"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd"
+                                            />
+                                        </svg>
+                                    </button>
+                                
+                                
+                                    <div
+                                        x-cloak
+                                        x-show="desktopOpen"
+                                        x-transition:enter="transition ease-out duration-200"
+                                        x-transition:enter-start="opacity-0 translate-y-1"
+                                        x-transition:enter-end="opacity-100 translate-y-0"
+                                        x-transition:leave="transition ease-in duration-150"
+                                        x-transition:leave-start="opacity-100 translate-y-0"
+                                        x-transition:leave-end="opacity-0 translate-y-1"
+                                        id="navitem_3"
+                                        role="menu"
+                                        class="absolute z-20 w-screen max-w-xs px-2 mt-6 transform -translate-x-1/2 top-12 left-1/2 sm:px-0"
+                                        aria-orientation="vertical"
+                                    >
+                                        <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                            
+                                            <div class="relative grid gap-6 px-5 py-6 bg-white sm:gap-8 sm:p-8 overflow-y-auto" style="max-height: 80vh;">
+                                                
+                                                    <a
+                                                        href=" gallery-Beach-Pics "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Beach Pics</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" gallery-Roofing "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Roofing</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" gallery-Roof-replacement- "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Roof replacement </p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" gallery-Fortified- "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Fortified </p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" gallery-Roofing-project "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">Roofing project</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" gallery-COMMERCIAL "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">COMMERCIAL</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                                    <a
+                                                        href=" gallery-All "
+                                                        role="menuitem"
+                                                        class="block p-3 -m-3 transition rounded-md  focus:outline-none focus:ring-0 focus:ring-offset-0 hover:bg-gray-50"
+                                                    >
+                                                        <p class="mt-1 text-base font-medium uppercase">All Photos</p>
+<!--                                                        <p class="mt-1 text-sm text-gray-500 line-clamp-2"></p>-->
+                                                    </a>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" showcases "
+                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'text-primary': true }"
+                                    >
+                                        Showcases
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" reviews "
+                                        class=" border-transparent   hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'text-primary': true }"
+                                    >
+                                        Reviews
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                            <div
+                                class="relative flex items-center"
+                                x-trap.inert="desktopOpen"
+                                x-data="{ desktopOpen: false }"
+                                @keydown.escape.stop="desktopOpen = false"
+                                @click.away="desktopOpen = false"
+                            >
+                                
+                                    <a
+                                        href=" blog "
+                                        class=" border-secondary hover:border-gray-300    hover:border-gray-300 hover:text-gray-700  group pb-5 pt-6 inline-flex items-center px-1 transition text-sm font-medium  focus:outline-none focus:ring-0 focus:ring-offset-0 uppercase"
+                                        :class="{ 'text-primary': true }"
+                                    >
+                                        Blog
+                                    </a>
+                                
+                                
+
+                            </div>
+                        
+                        
+
+                    </div>
+                    <p :class="{'translate-x-0': !scrolledFromTop, 'translate-x-12': scrolledFromTop}" class="text-gray-500 transition-transform">
+                        
+                    </p>
+                    <div class="w-full sm:w-auto">
+                        
+                        <div onclick="postCtaClick('text')" class="w-full sm:w-auto cta_text_button hover:scale-110 transition duration-300 ease-in-out">
+                            <button
+                                :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                                @click="contactModalOpen = true"
+                                class="inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition border-2 border-transparent rounded-md  text-primary-foreground focus:outline-none sm:w-auto  bg-primary hover:bg-primary-darker  focus:ring-0 focus:ring-offset-0"
+                                >
+                                Send us a Text
+                            </button>
+                        </div> 
+                        
+                    </div>
+
+                    <div class="inline-flex w-full sm:w-auto">
+                        
+                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                            <a
+                                target = "_blank" 
+                                href="tel:+19108501268"
+                                :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                                class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
+                                >
+                                Call Now
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <template x-teleport="body">
+            <div
+                x-cloak
+                x-show="mobileOpen"
+                x-trap.inert.noscroll="mobileOpen"
+                x-transition:enter="duration-150 ease-out"
+                x-transition:enter-start="opacity-0 scale-95"
+                x-transition:enter-end="opacity-100 scale-100"
+                x-transition:leave="duration-100 ease-in"
+                x-transition:leave-start="opacity-100 scale-100"
+                x-transition:leave-end="opacity-0 scale-95"
+                class="fixed inset-0 z-50 overflow-y-scroll transition origin-top-right transform xl:hidden"
+            >
+                <div class="block w-full h-full overflow-y-scroll bg-white shadow-md ring-1 ring-black ring-opacity-5">
+                    <div class="flex sticky top-0 z-50 bg-white h-auto items-center justify-between px-5 pt-4">
+                        <div>
+                        
+                            <a
+                                href=" ./"
+                                class="flex items-center justify-center flex-shrink-0 bg-white rounded-b-lg focus-visible:ring focus:outline-none ring-primary"
+                            >
+                            
+                                <picture>
+                                    <source
+                                        type="image/webp" 
+                                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png" loading="auto"
+                                    >
+                                    <img
+                                        class="h-[80px] object-contain"
+                                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png"
+                                        alt="Brand Logo"
+                                        width="80"
+                                        height="80"
+                                        loading="auto"
+                                        fetchpriority="high"
+                                        decoding="async"
+                                    />
+                                </picture>
+                            
+                            </a>
+                        
+                        </div>
+                        <div class="-mr-2">
+                            <button
+                                @click="mobileOpen = false"
+                                type="button"
+                                class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            >
+                                <span class="sr-only">Close menu</span>
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex flex-col screen-height-minus-navbar overflow-y-scroll">
+                        <div x-data="{ openMenu: '' }" class="relative block overflow-y-scroll h-full px-2 pt-2 pb-3 space-y-1">
+                            
+                                <div x-trap.inert="openMenu == 'navitem_1'">
+                                    
+                                        <a
+                                            href=" ./ "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Home</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_2'">
+                                    
+                                        <button
+                                            aria-haspopup="true"
+                                            :aria-expanded="openMenu == 'navitem_2'"
+                                            aria-controls="mobile-navitem_2"
+                                            @click="openMenu = openMenu == 'navitem_2' ? '' : 'navitem_2'"
+                                            class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
+                                            :class="openMenu == 'navitem_2' ? 'z-30' : 'z-0'"
+                                        >
+                                            <span>Services</span>
+                                            <svg
+                                                class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                                :class="{ '-rotate-180': openMenu == 'navitem_2' }"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </button>
+                                    
+                                    
+                                        <div
+                                            x-cloak
+                                            x-show="openMenu == 'navitem_2'"
+                                            x-collapse
+                                            id="mobile-navitem_2"
+                                            role="menu"
+                                            class="z-20 pt-1 pb-2"
+                                            aria-orientation="vertical"
+                                        >
+                                            <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                                
+                                                    <a href="service-Residential-Roof-Replacement" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Residential Roof Replacement</p>
+                                                    </a>
+                                                
+                                                    <a href="service-Commercial-Roof-Replacement" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Commercial Roof Replacement</p>
+                                                    </a>
+                                                
+                                                    <a href="service-Roofing-Repairs" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Roofing Repairs</p>
+                                                    </a>
+                                                
+                                                    <a href="service-Seamless-Gutter---Gutter-Gaurds" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Seamless Gutter &amp; Gutter Gaurds</p>
+                                                    </a>
+                                                
+                                                    <a href="service-Siding-Installation" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Siding Installation</p>
+                                                    </a>
+                                                
+                                                    <a href="service-Fortified-Roofer" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Fortified Roofer</p>
+                                                    </a>
+                                                
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_3'">
+                                    
+                                        <button
+                                            aria-haspopup="true"
+                                            :aria-expanded="openMenu == 'navitem_3'"
+                                            aria-controls="mobile-navitem_3"
+                                            @click="openMenu = openMenu == 'navitem_3' ? '' : 'navitem_3'"
+                                            class="relative inline-flex items-center w-full px-3 py-2 overflow-hidden text-base font-medium text-gray-500 transition rounded-md border-secondary uppercase"
+                                            :class="openMenu == 'navitem_3' ? 'z-30' : 'z-0'"
+                                        >
+                                            <span>Galleries</span>
+                                            <svg
+                                                class="w-5 h-5 ml-2 text-gray-400 transition-transform duration-300"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                                :class="{ '-rotate-180': openMenu == 'navitem_3' }"
+                                            >
+                                                <path
+                                                    fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </button>
+                                    
+                                    
+                                        <div
+                                            x-cloak
+                                            x-show="openMenu == 'navitem_3'"
+                                            x-collapse
+                                            id="mobile-navitem_3"
+                                            role="menu"
+                                            class="z-20 pt-1 pb-2"
+                                            aria-orientation="vertical"
+                                        >
+                                            <div class="relative grid gap-6 px-5 py-2 bg-white rounded-lg">
+                                                
+                                                    <a href="gallery-Beach-Pics" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Beach Pics</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Roofing" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Roofing</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Roof-replacement-" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Roof replacement </p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Fortified-" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Fortified </p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-Roofing-project" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">Roofing project</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-COMMERCIAL" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">COMMERCIAL</p>
+                                                    </a>
+                                                
+                                                    <a href="gallery-All" role="menuitem" class="block p-3 -m-3 transition rounded-md">
+                                                        <p class="mt-1 text-sm text-gray-500 uppercase">All Photos</p>
+                                                    </a>
+                                                
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" showcases "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Showcases</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_4'">
+                                    
+                                        <a
+                                            href=" reviews "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Reviews</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                                <div x-trap.inert="openMenu == 'navitem_7'">
+                                    
+                                        <a
+                                            href=" blog "
+                                            class="text-gray-500 block px-3 py-2 text-base font-medium rounded-md border-secondary transition uppercase"
+                                            >Blog</a
+                                        >
+                                    
+                                    
+                                </div>
+                            
+                            
+                        </div>
+                            <div class="flex flex-col fixed bottom-0 w-full p-2 bg-primary">
+                                
+                                <div onclick="postCtaClick('text')" class="w-full sm:w-auto">
+                                    <button
+                                    @click="contactModalOpen = true"
+                                    class="relative block w-full px-5 py-3 whitespace-nowrap font-medium text-center rounded-md bg-secondary focus:outline-none focus:ring focus:z-10 text-white hover:bg-gray-100 hover:text-gray-900 my-2"
+                                    >
+                                        Send us a Text
+                                    </button>
+                                </div>
+                                
+
+                                
+                                <div onclick="postCtaClick('call')" class="w-full">
+                                    <a
+                                        target = "_blank"
+                                        href="tel:+19108501268"
+                                        :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
+                                        class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
+                                        >
+                                        Call Now
+                                    </a>
+                                </div>
+                                 
+                            
+                        
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+</nav>
+
+<script>
+    const navBar = document.getElementById('nav-bar')
+    const launchBanner = document.getElementById('launch-site-banner')
+    const contactUsButton = document.getElementById('contact-us-button')
+    const isMobile = window.isMobile
+    if (((window.location.href.includes('prosite.prophone.com')
+     || window.location.href.includes('dev.prosite.prophone.com')
+     || window.location.href.includes('stage.prosite.prophone.com')
+     || window.location.href.includes('127.0.0.1:8000')
+     || window.location.href.includes('localhost')) && window.location.href.includes('m/v2/b/'))) {
+        launchBanner.style.display = 'block'
+        if (isMobile) {
+            navBar.className = "fixed inset-x-0 sm:top-16 z-50 transition-all duration-200"
+            contactUsButton.href = "tel:8573653045"
+        } else {
+            navBar.className = "fixed inset-x-0 top-0 sm:top-16 z-50 transition-all duration-200"
+            contactUsButton.href = "mailto:support@prophone.com?subject=ProPhone - Sales Inquiry"
+        }
+    } else {
+        launchBanner.style.display = 'none'
+        navBar.className = "fixed inset-x-0 !top-0 sm:top-0 z-50 transition-all duration-200"
+    }
+
+    async function postCtaClick(type) {
+        if (type === "text") history.replaceState(null, "", "contact");
+        try {
+            await fetch("https://prosite.prophone.com/api/post-cta-click/" + 'Halo-Roofing-Renovations/' + type, {
+                method: 'GET',
+            })
+        } catch (e) {
+            console.log('error', e)
+        }
+        return
+    }
 </script>
 
+<style>
+
+    @media (max-width: 500px) {
+        .logo{
+            max-width: 160px;
+        }
+    }
+
+</style>
+        
+        
+            <!--<script defer src="https://unpkg.com/siema@1.5.1/dist/siema.min.js"></script>-->
+<!-- <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script> -->
+<!--<script defer src="https://unpkg.com/@alpinejs/trap@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/alpinejs@3.7.0/dist/cdn.min.js"></script>-->
+<!--<script defer src="https://unpkg.com/focus-visible@5.2.0/dist/focus-visible.min.js"></script>-->
+        
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                        <section>
+    <div
+            class="flex justify-center m-auto w-full bg-primary bg-opacity-10"
+            data-heap-component-name="blog-post"
+            data-heap-version="v2"
+    >
+        <div class="flex flex-col text-center justify-center items-center mx-8 my-16 sm:mx-auto sm:py-16 sm:w-4/5">
+            <div class="space-y-5 flex flex-col items-center">
+                <h1 class="flex flex-col items-center space-y-4 pb-8 sm:max-w-3xl">
+                    <span class="block text-base font-semibold tracking-wide text-center uppercase text-secondary">Blog</span>
+                    <span class="text-3xl font-extrabold text-center text-primary sm:text-4xl sm:w-3/4">Eco-Advancements in Roofing: Halo Roofing’s Commitment to Sustainable Solutions</span>
+                    <span class="block text-lg text-center text-gray-500">Aug 06, 2025</span>
+                </h1>
+                <div class="flex flex-col space-y-8 text-gray-500 text-lg text-left sm:max-w-3xl leading-8 blog-headers blog-list">
+                    In the rapidly evolving world of construction and home improvement, sustainability has taken center stage. As more homeowners focus on reducing their carbon footprint, eco-friendly advancements in roofing solutions are becoming increasingly important. At Halo Roofing & Renovations, we understand this shift and are committed to providing innovative and sustainable roofing options. Our dedication to the environment helps protect the planet while ensuring that our clients receive top-quality service and long-lasting results. <p>The journey towards more sustainable roofing begins with material selection. Traditional roofing materials like asphalt shingles and concrete tiles, while effective, can be detrimental to the environment due to their energy-intensive manufacturing processes and potential waste. Luckily, modern eco-friendly roofing materials are changing the game. Among these, recycled metal roofs and green roofs provide excellent alternatives. Metal roofs not only last longer but are also recyclable at the end of their life cycle. Similarly, green roofs, which incorporate vegetation, not only help insulate homes but also contribute to air purification efforts.<p>Another important aspect of sustainable roofing solutions at Halo Roofing is the emphasis on energy efficiency. Roofing systems play a significant role in a home’s overall energy consumption. By using reflective coatings and cool roofing technologies, we can minimize the heat absorbed by roofs, subsequently reducing the need for air conditioning during hotter months. This approach leads to substantial energy savings for homeowners and lessens the strain on power grids, contributing to environmental conservation.<p>Halo Roofing & Renovations also focuses on the installation process itself to ensure eco-friendliness. Our expert team is trained in efficient installation techniques that reduce waste and improve the longevity of the roofing materials. By ensuring precise installation, we prevent premature wear and tear, which is crucial for sustainability. Additionally, our commitment to sourcing materials locally wherever possible further reduces the environmental impact associated with transportation.<p>Solar roofing is another area where Halo Roofing shines in sustainability. As solar power becomes increasingly affordable, more homeowners are turning to solar shingles and roof panels. These not only provide clean energy but can also increase a home's value and decrease electricity bills. Our team is skilled in integrating solar technologies seamlessly with existing and new roofs, ensuring that customers can harness the power of the sun without compromising aesthetics or functionality.<p>At Halo Roofing & Renovations, we also believe in educating our customers about sustainable roofing choices. By offering consultations and detailed information on eco-friendly options, we empower homeowners to make informed decisions that align with their environmental values. This transparency and commitment to education reflect our broader mission of promoting sustainability within the community.<p>In conclusion, eco-advancements in roofing are not just a trend—they are the future. Halo Roofing & Renovations is at the forefront of this movement, dedicated to offering sustainable roofing solutions that benefit both homeowners and the planet. Through the use of eco-friendly materials, energy-saving technologies, and sustainable practices, we are proud to provide roofing solutions that can help reduce your carbon footprint without sacrificing quality or performance. Choosing Halo Roofing means choosing a partner committed to excellence and environmental stewardship, paving the way for a greener tomorrow.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                        
+                            <template x-teleport="body">
+    <div
+            x-show="contactModalOpen"
+            @keydown.escape.prevent.stop="contactModalOpen = false"
+            role="dialog"
+            aria-modal="true"
+            x-id="['modal-title']"
+            :aria-labelledby="$id('modal-title')"
+            class="fixed inset-0 z-50"
+            x-trap.noscroll.inert="contactModalOpen"
+            id="send-text-modal"
+            data-heap-component-name="send-text-modal"
+	        data-heap-version="v2.1"
+    >
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0"
+                x-transition:enter-end="opacity-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0"
+                aria-hidden="true"
+                class="fixed inset-0 bg-black bg-opacity-50"
+        ></div>
+        <div
+                x-show="contactModalOpen"
+                x-transition:enter="ease-out duration-300"
+                x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave="ease-in duration-200"
+                x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+                x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                onclick="handleClose('blog-eco-advancements-in-roofing-halo-roofings')"
+                @click="contactModalOpen = false"
+                class="relative flex items-center justify-center w-full h-full bg-primary"
+        >
+            <div
+                @click.stop
+                class="flex flex-col w-full sm:h-auto h-full overflow-hidden text-left align-bottom transition-all transform rounded-lg sm:px-0 sm:my-0 sm:align-middle sm:max-w-3xl h-auto max-h-full"
+            >
+                <div class="sm:hidden relative px-6">
+                    <h2 class="mt-6 text-2xl font-bold text-center text-white" id="mobile-screen-send-us-a-text-header">Send us a text</h2>
+                    <p class="mb-3 mt-1 font-normal text-base text-center text-white" id="mobile-screen-send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                    <button
+                            onclick="handleClose('blog-eco-advancements-in-roofing-halo-roofings')"
+                            @click="contactModalOpen = false;"
+                            class="absolute p-1 transition rounded  top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2"
+                    >
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="#fff">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden sm:relative sm:px-6 sm:flex sm:flex-col">
+                    <h2 class="mt-6 text-6xl font-extrabold text-center text-white" id="send-us-a-text-header">Send us a text</h2>
+                    <p class="my-6 text-lg text-center text-white" id="send-us-a-text-subheader">We usually respond via text within a few minutes.</p>
+                    <div aria-hidden="true" class="absolute inset-x-0 h-8 -bottom-8"></div>
+                </div>
+                <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
+
+                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('Halo-Roofing-Renovations', 'contact-modal', '+19108501268')">
+                    <div class="flex flex-shrink-1 h-auto overflow-x-hidden overflow-y-auto pb-3">
+                        <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
+                            
+                            
+                                <div>
+                                    <label for="contact-full-name" class="font-medium text-base text-white">
+                                      Full name *
+                                    </label>
+                                    <input
+                                      type="text"
+                                      name="full-name"
+                                      id="contact-full-name"
+                                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                                      placeholder="Jane Rodgers"
+                                      required
+                                    />
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div>
+                                    <label for="contact-phone-number" class="font-medium text-base text-white">
+                                      Phone number<span> *</span>
+                                    </label>
+                                    <input
+                                      type="tel"
+                                      autocomplete="on"
+                                      name="phone-number"
+                                      id="contact-phone-number"
+                                      class="contact-phone-number block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                                      required
+                                    />
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                              <div>
+                                  <label for="contact-address" class="font-medium text-base text-white">
+                                    Address<span> *</span>
+                                  </label>
+                                  <input
+                                      type="text"
+                                      name="address"
+                                      id="contact-address"
+                                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                                      placeholder="123 Main Street, Boston, MA 02212"
+                                      onkeydown="if(event.key === 'Enter') event.preventDefault();"
+                                      required
+                                    />
+                              </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div>
+                                    <label for="contact-email" class="font-medium text-base text-white">
+                                      Email
+                                    </label>
+                                    <input
+                                      type="text"
+                                      name="email"
+                                      id="contact-email"
+                                      class="block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                                      placeholder="name@example.com"
+                                      
+                                    />
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div class="relative">
+                                    <label for="contact-date" class="font-medium text-base text-white">Preferred Date of Service</label>
+                                    <div class="w-4 h-4 absolute transform translate-y-4.5 left-4">
+                                    </div>
+                                    <input id="contact-date" name="date" type="date" class="block text-left z-50 w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary" >
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div class="block sm:grid sm:col-span-2">
+                                    <label class="font-medium text-base text-white">Services</label>
+                                    <fieldset class="bg-white p-4 sm:p-6 mt-1 rounded-md" >
+                                        <div class="grid auto-cols-auto gap-4 grid-cols-2">
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-1572684"
+                                                    name="service-1572684"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Residential Roof Replacement"
+                                                />
+                                                <label for="contact-service-1572684" class="ml-3 text-sm font-normal text-gray-700">Residential Roof Replacement</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-1572685"
+                                                    name="service-1572685"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Commercial Roof Replacement"
+                                                />
+                                                <label for="contact-service-1572685" class="ml-3 text-sm font-normal text-gray-700">Commercial Roof Replacement</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-1572686"
+                                                    name="service-1572686"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Roofing Repairs"
+                                                />
+                                                <label for="contact-service-1572686" class="ml-3 text-sm font-normal text-gray-700">Roofing Repairs</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-1572687"
+                                                    name="service-1572687"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Seamless Gutter & Gutter Gaurds"
+                                                />
+                                                <label for="contact-service-1572687" class="ml-3 text-sm font-normal text-gray-700">Seamless Gutter & Gutter Gaurds</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-1572688"
+                                                    name="service-1572688"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Siding Installation"
+                                                />
+                                                <label for="contact-service-1572688" class="ml-3 text-sm font-normal text-gray-700">Siding Installation</label>
+                                            </div>
+
+                                            
+                                            <div class="flex items-center">
+                                                <input
+                                                    id="contact-service-1572689"
+                                                    name="service-1572689"
+                                                    type="checkbox"
+                                                    class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                    value="Fortified Roofer"
+                                                />
+                                                <label for="contact-service-1572689" class="ml-3 text-sm font-normal text-gray-700">Fortified Roofer</label>
+                                            </div>
+
+                                            
+
+                                            <div class="flex flex-col">
+                                                <div class="flex items-center">
+                                                     <input
+                                                            id="contact-service-other-checkbox"
+                                                            name="service-other"
+                                                            type="checkbox"
+                                                            class="w-4 h-4 border-gray-300 rounded text-primary focus:ring-primary"
+                                                            value="Other"
+                                                            onclick="toggleOtherServices()"
+                                                        />
+                                                    <label for="contact-service-other-checkbox" class="ml-3 text-sm text-gray-600">Other</label>
+                                                </div>
+                                                <input
+                                                    id="contact-service-other-text"
+                                                    name="service-other-text"
+                                                    type="text"
+                                                    class="ml-4 block w-full border-gray-300 py-2.5 mt-1 rounded-md shadow-sm focus:ring-primary focus:border-primary hidden"
+                                                />
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                <div class="block sm:grid sm:col-span-2">
+                                    <label for="contact-paragraph-c741b5c9-8c72-4902-8b7d-3b06e9021c5e" class="font-medium text-base text-white">
+                                      How can we help?
+                                    </label>
+                                    <textarea
+                                      id="contact-paragraph-c741b5c9-8c72-4902-8b7d-3b06e9021c5e"
+                                      name="paragraph-c741b5c9-8c72-4902-8b7d-3b06e9021c5e"
+                                      rows="4"
+                                      class="block py-2.5 px-2.5 mt-1 w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary text-gray-900"
+                                      placeholder="Type your response here..."
+                                      
+                                    ></textarea>
+                                </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col flex-shrink-0 z-50 px-6 pb-4 bg-primary w-full align-middle items-center justify-center shadow-top-lg">
+                        
+                            <div class="flex text-gray-300 text-sm font-normal mt-1.5">
+                                By providing your phone number, you agree to receive text messages (SMS) from Halo Roofing &amp; Renovations. You can unsubscribe at anytime by replying STOP. Message and data rates may apply. Message frequency varies.
+                            </div>
+                        
+                        <button
+                            id='sendButton'
+                            class="cta_text_conversion flex justify-center relative rounded-lg mx-4 py-2.5 mt-6 sm:mt-4 bg-secondary hover:bg-secondary-darker w-full text-primary-foreground"
+                        >
+                            Send
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const utmParams = {};
+
+        // Extract UTM parameters
+        urlParams.forEach((value, key) => {
+            if (key.startsWith("utm_")) {
+                utmParams[key] = value;
+            }
+        });
+
+        // Store UTM parameters in sessionStorage
+        if (Object.keys(utmParams).length > 0) {
+            sessionStorage.setItem("utmParams", JSON.stringify(utmParams));
+        }
+    });
+    document.addEventListener("click", (event) => {
+        const target = event.target.closest("a");
+        if (target && target.href) {
+            const utmParams = JSON.parse(sessionStorage.getItem("utmParams") || "{}");
+
+            if (Object.keys(utmParams).length > 0) {
+                const targetUrl = new URL(target.href);
+
+                // Check if the target URL belongs to the same domain
+                if (targetUrl.hostname === window.location.hostname) {
+                    // Append UTM parameters
+                    for (const [key, value] of Object.entries(utmParams)) {
+                        targetUrl.searchParams.append(key, value);
+                    }
+
+                    // Prevent default navigation and redirect with updated URL
+                    event.preventDefault();
+                    window.location.href = targetUrl.toString();
+                }
+            }
+        }
+    });
+    function handleClose(page) {
+        const url = new URL(window.location.href);
+        history.replaceState(null, "", `${url.origin}${url.pathname.replace(/\/[^/]+$/, page === 'contact' || page === 'index' ? '/' : `/${page}`)}${url.search}`);
+    }
+    const toggleOtherServices = () => {
+        const otherServices = document.getElementById('contact-service-other-checkbox')
+        const otherServicesInput = document.getElementById('contact-service-other-text')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+    const toggleOtherServicesMobile = ()=>{
+        const otherServices = document.getElementById('contact-service-Other')
+        const otherServicesInput = document.getElementById('contact-service-other-text2')
+        if (otherServices.checked) {
+            otherServicesInput.classList.remove('hidden')
+            otherServicesInput.classList.add('block')
+        } else {
+            otherServicesInput.classList.remove('block')
+            otherServicesInput.classList.add('hidden')
+        }
+    }
+     var observer2 = new MutationObserver(function() {
+    var dateInput = document.getElementById("contact-date");
+    if (dateInput) {
+      var today = new Date();
+      var twoYearsLater = new Date();
+      twoYearsLater.setFullYear(today.getFullYear() + 2);
+
+      dateInput.setAttribute("min", today.toISOString().split("T")[0]);
+      dateInput.setAttribute("max", twoYearsLater.toISOString().split("T")[0]);
+
+      observer2.disconnect();
+    }
+  });
+  observer2.observe(document, { childList: true, subtree: true });
+</script>
+                            <template x-teleport="body">
+    <div x-show="reviewModalOpen" @keydown.escape.prevent.stop="reviewModalOpen = false" role="dialog" aria-modal="true" x-id="['modal-title']" :aria-labelledby="$id('modal-title')" class="fixed inset-0 z-50 pt-8 pb-20" x-trap.noscroll.inert="reviewModalOpen"
+         data-heap-component-name="leave_a_review"
+         data-heap-version="v2.1"
+    >
+        <div x-show="reviewModalOpen" x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50"></div>
+        <div
+            x-show="reviewModalOpen"
+            x-transition:enter="ease-out duration-300"
+            x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave="ease-in duration-200"
+            x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+            x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+            @click="reviewModalOpen = false"
+            class="relative flex items-center justify-center w-full h-full"
+        >
+            <div @click.stop class="flex flex-col w-full max-h-full pb-6 mx-6 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-lg shadow-xl px-6 sm:my-8 sm:align-middle sm:max-w-sm">
+                <div class="relative px-6 bg-white">
+                    <h2 class="mt-8 mb-2 text-lg font-medium text-center" :id="$id('modal-title')">Leave a review</h2>
+                    <button @click="reviewModalOpen = false;" class="absolute p-1 transition rounded top-5 right-5 hover:bg-gray-100 focus-visible:ring-2 focus:outline-none ring-primary ring-opacity-75 ring-offset-2">
+                        <span class="sr-only">Close modal</span>
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <ul class="mt-2 space-y-6">
+                    <span hidden class="sr-only">Review types</span>
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://search.google.com/local/writereview?placeid=ChIJs7gNiNZ_rIkRVU-bwhOCTqg" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Google
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li class="hidden md:block">
+                        <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/profile.php?id=100085995304830&amp;sk=reviews" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    <li class="block md:hidden">
+                        <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/profile.php?id=100085995304830" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Facebook
+                            
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.yelp.com/biz/halo-roofing-and-renovations-benson" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                            
+                                Yelp
+                            
+                        </a>
+                    </li>
+                    
+                    
+                        <li>
+                            <a target="_blank" rel="noopener noreferrer" href="https://https://www.yelp.com/biz/halo-roofing-and-renovations-benson" class="inline-flex w-full px-5 py-2.5 text-sm font-medium transition border-2 border-transparent rounded-md bg-primary text-primary-foreground focus:outline-none hover:bg-primary-darker focus:ring-2 ring-primary ring-opacity-75 ring-offset-2">
+                                
+                                    Other
+                                
+                            </a>
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>
+
+                        
+                    
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+            
+        
+            
+
+                
+                
+                    
+                
+                
+            
+        
+            
+             
+                
+                    
+                         
+    
+        <section
+                data-heap-component-name="final-cta"
+                data-heap-version="v2.1"
+                class="flex final-cta-image two-thirds-screen-height w-full bg-center bg-cover custom_text_color text-white">
+                <div style="--tw-bg-opacity:75%;" class="flex flex-col items-center justify-center px-6 py-12 text-center sm:px-6 lg:py-16 lg:px-8 w-full bg-primary">
+                <h2 class="flex flex-col items-center text-3xl font-extrabold sm:text-6xl">
+                    <span class="flex">Ready to get started?</span>
+                    <span class="flex">Book an appointment today.</span>
+                </h2>
+                <div class="w-full mt-5 sm:mt-8 sm:flex sm:justify-center">
+                    
+                    <div onclick="postCtaClick('text')" class="w-full sm:w-auto mr-4 cta_text_button">
+                        <button 
+                            @click="contactModalOpen = true"
+                            class="flex justify-center w-full relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-secondary relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300"
+                        >
+                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                            <span class="relative">Get a Free Quote</span>
+                        </button>
+                    </div> 
+                    
+                        
+                    
+                    <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
+                        <a
+                            target = "_blank" 
+                            href="tel:+19108501268"
+                            class="cta_call_conversion flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
+                            <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+                            <span class="relative">Call Us</span>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    
+
+
+                    
+                
+             
+            
+        
+            
+
+
+<footer
+        class="bg-primary"
+        aria-labelledby="footer-heading"
+        data-heap-component-name="footer"
+        data-heap-version="v2.1"
+        id="footer"
+>
+  <h2 id="footer-heading" class="sr-only">Footer</h2>
+  <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:pt-16 lg:pb-10 lg:px-8">
+      <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          <div class="space-y-8 xl:col-span-1">
+              
+              
+                <picture>
+                    <source
+                        type="image/webp"
+                        class="h-[80px] w-auto"
+                        srcset="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png, https://d3p2r6ofnvoe67.cloudfront.net/fit-in/320x320/filters:strip_exif()/filters:no_upscale()/filters:format(webp)/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png 2x" 
+                        alt="Footer logo"
+                    >
+                    <img
+                        class="h-[80px] w-auto"
+                        src="https://d3p2r6ofnvoe67.cloudfront.net/fit-in/160x160/filters:strip_exif()/filters:no_upscale()/media/e1414e01-e55f-4364-ac44-84aaa9c15a96.png"
+                        width="80" 
+                        height="80"
+                        alt="Footer logo"
+                        loading="lazy"
+                    />
+                </picture>
+              
+              
+              <p class="text-base text-gray-100">
+                  Halo Roofing &amp; Renovations<br/>
+                  
+                    605 South Wall Street, Benson, NC 27504, US <br/>
+                  
+                  
+                  info@haloroofingnc.com<br/>
+              </p>
+              <p class="text-base text-gray-100">ⓒ All Rights Reserved</p>
+              <div class="flex flex-wrap align-middle items-center">
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://facebook.com/profile.php?id=100085995304830" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                    <span class="sr-only">Facebook</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            fill-rule="evenodd"
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                  </a>
+                  
+                  
+                  
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://maps.google.com/maps?cid=12127773867936272213" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                    <span class="sr-only">Google</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" class="w-6 h-6" fill="currentColor">
+                        <path d="M 15.003906 3 C 8.375 3 3 8.371094 3 15 C 3 21.628906 8.375 27 15.003906 27 C 25.015625 27 27.269531 17.707031 26.328125 13 L 15 13 L 15 17 L 22.738281 17 C 21.847656 20.449219 18.726562 23 15 23 C 10.582031 23 7 19.417969 7 15 C 7 10.582031 10.582031 7 15 7 C 17.007812 7 18.839844 7.746094 20.246094 8.96875 L 23.085938 6.128906 C 20.953125 4.183594 18.117188 3 15.003906 3 Z M 15.003906 3 "/>
+                    </svg>
+                  </a>
+                  
+                  
+                  
+                  <a target="_blank" rel="noopener noreferrer" href="https://www.yelp.com/biz/halo-roofing-and-renovations-benson" class="mr-3 mb-3 text-gray-100 hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                    <span class="sr-only">Yelp</span>
+                    <svg class="w-6 h-6" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                        <path d="m 2.5136226,8.071675 0,0.15742 q 0,0.52069 0.072654,0.83552 0.060545,0.21796 0.2300707,0.30878 0.1695257,0.0908 0.3511604,0.0303 l 2.470232,-0.76286 q 0.2663975,-0.0848 0.3753783,-0.31484 0.060545,-0.12109 0.060545,-0.24218 0,-0.12109 -0.060545,-0.23007 Q 5.9041372,7.623675 5.6256306,7.538915 L 3.1553985,6.545975 q -0.1695257,-0.0363 -0.3329969,0.0908 -0.1634713,0.12714 -0.1997982,0.36932 -0.096872,0.43592 -0.1089808,1.06558 z m 1.0534813,-5.77598 q -0.060545,-0.0969 -0.060545,-0.19374 0,-0.10898 0.072654,-0.21796 0.1453078,-0.20586 0.4601413,-0.32695 0.9808273,-0.37538 2.0706356,-0.55701 l 0.060545,0 q 0.5449041,0 0.5933401,0.46014 0.3027245,3.79011 0.3027245,4.75883 0,0.3996 -0.3269425,0.48436 -0.072654,0.0242 -0.1453078,0.0242 -0.2542886,0 -0.4480323,-0.30273 Q 4.3541877,3.615555 3.567104,2.295675 Z m 0.8355196,9.26337 1.6831484,-2.01009 q 0.2300706,-0.25429 0.4601412,-0.25429 0.096872,0 0.1937437,0.0363 0.3027245,0.1332 0.3027245,0.5449 0,0.0605 -0.012109,0.12109 l 0,2.67609 q -0.024218,0.16952 -0.2058526,0.2664 -0.1089809,0.0605 -0.2179617,0.0605 -0.096872,0 -0.1937437,-0.0363 -0.4359233,-0.0726 -1.0292633,-0.30878 -0.5933401,-0.23612 -0.8839556,-0.45408 -0.2179617,-0.16953 -0.2179617,-0.36327 0,-0.1332 0.1210898,-0.27851 z m 3.5600404,-4.08073 q -0.072654,-0.1453 -0.072654,-0.2785 0,-0.20585 0.1816348,-0.3996 l 1.5741675,-2.16751 q 0.084763,-0.0969 0.2421796,-0.0969 0.036327,0 0.084763,0.0121 0.2058522,0.0242 0.3511602,0.21796 0.302725,0.31484 0.641776,0.85369 0.339052,0.53885 0.448032,0.89001 0.03633,0.0969 0.03633,0.18163 0,0.10898 -0.04844,0.19374 -0.09687,0.15742 -0.278506,0.19375 l -2.5307761,0.64177 q -0.096872,0.0242 -0.1937437,0.0242 -0.2785066,0 -0.4359233,-0.2664 z m 0.1453078,1.51363 q -0.1089809,0.14531 -0.1089809,0.29061 0,0.19375 0.1574168,0.38749 l 1.3804238,2.30071 q 0.084763,0.10898 0.2906155,0.10898 l 0.036327,0 q 0.2300711,-0.0121 0.3995961,-0.18164 0.326943,-0.29061 0.672049,-0.75681 0.345106,-0.46619 0.502522,-0.84157 0.04844,-0.1332 0.04844,-0.25429 0,-0.0848 -0.03633,-0.15742 -0.06054,-0.16952 -0.23007,-0.23007 L 8.7376387,8.810325 q -0.1210898,-0.0484 -0.2300706,-0.0484 -0.2542886,0 -0.3995964,0.23007 z"/>
+                    </svg>
+                  </a>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              </div>
+          </div>
+          <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                  <div>
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Company</h3>
+                      <ul role="list" class="mt-4  space-y-4">
+                          <li>
+                              <a
+                                  href="./"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Home</a
+                              >
+                          </li>
+                          
+                              
+                              <li>
+                                  <a
+                                      href="gallery-All"
+                                      class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                      >Galleries</a
+                                  >
+                              </li>
+                              
+                          
+                          
+                          <li>
+                              <a
+                                  href="reviews"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Reviews</a
+                              >
+                          </li>
+                          
+                          
+                          
+                          
+                          <li>
+                              <a
+                                  href='sitemap.xml'
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Sitemap</a
+                              >
+                          </li>
+                          
+                      </ul>
+                  </div>
+                  <div class="mt-12 md:mt-0">
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Services</h3>
+                      <ul role="list" class="mt-4  space-y-4">
+                          
+                          <li>
+                              <a
+                                  href="service-Residential-Roof-Replacement"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Residential Roof Replacement</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Commercial-Roof-Replacement"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Commercial Roof Replacement</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Roofing-Repairs"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Roofing Repairs</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Seamless-Gutter---Gutter-Gaurds"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Seamless Gutter &amp; Gutter Gaurds</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Siding-Installation"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Siding Installation</a
+                              >
+                          </li>
+                          
+                          <li>
+                              <a
+                                  href="service-Fortified-Roofer"
+                                  class="text-base text-gray-100 rounded hover:text-gray-300 focus:ring-0 focus:ring-offset-0"
+                                  >Fortified Roofer</a
+                              >
+                          </li>
+                          
+                      </ul>
+                  </div>
+              </div>
+              <div class="md:grid md:grid-cols-2 md:gap-8">
+                  <div>
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Service Areas</h3>
+                      <ul role="list" class="mt-4  space-y-4">
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Benson, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Hampstead, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Pender County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Cumberland County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Harnett County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Johnston County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Lee County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Nash County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Sampson County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Wake County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Wayne County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Brunswick County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    New Hanover County, NC
+                                </span>
+                          </li>
+                          
+                          <li>
+                              
+                                <span class="text-base text-gray-100 rounded hover:text-gray-300 focus:outline-none focus:ring-0 focus:ring-offset-0">
+                                    Onslow County, NC
+                                </span>
+                          </li>
+                          
+                      </ul>
+                  </div>
+                  <div class="mt-12 md:mt-0">
+                      <h3 class="text-sm font-semibold tracking-wider text-gray-100 uppercase">Hours</h3>
+                      <ul role="list" class="mt-4  space-y-4">
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Sun: <br class="sm:hidden" /> Closed 
+                            </li>
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Mon: <br class="sm:hidden" /> 8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Tue: <br class="sm:hidden" /> 8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Wed: <br class="sm:hidden" /> 8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Thu: <br class="sm:hidden" /> 8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Fri: <br class="sm:hidden" /> 8:00am - 6:00pm 
+                            </li>
+                        
+                            <li class="text-sm sm:text-base text-gray-100 rounded focus:outline-none focus:ring-0 focus:ring-offset-0" style="white-space:nowrap">
+                                Sat: <br class="sm:hidden" /> Closed 
+                            </li>
+                        
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="pt-10 mt-12 text-center border-t-2 border-primary-lighter">
+      <div class="flex justify-center">
+            <div>
+                <div class="text-white">
+                    Designed by
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="24" viewBox="0 0 395 70" fill="none">
+                        <g clip-path="url(#clip0_1497_36)">
+                        <path d="M118.27 17.389V24.5215H108.586V53.9364H99.6836V24.5215H90.0001V17.389H118.27Z" fill="white"/>
+                        <path d="M137.94 54.3009C134.504 54.3009 131.345 53.5026 128.464 51.906C125.618 50.3094 123.345 48.0881 121.644 45.2421C119.978 42.3613 119.145 39.1335 119.145 35.5586C119.145 31.9837 119.978 28.7732 121.644 25.9271C123.345 23.0811 125.618 20.8598 128.464 19.2632C131.345 17.6667 134.504 16.8684 137.94 16.8684C141.376 16.8684 144.517 17.6667 147.363 19.2632C150.244 20.8598 152.5 23.0811 154.131 25.9271C155.797 28.7732 156.63 31.9837 156.63 35.5586C156.63 39.1335 155.797 42.3613 154.131 45.2421C152.465 48.0881 150.209 50.3094 147.363 51.906C144.517 53.5026 141.376 54.3009 137.94 54.3009ZM137.94 46.1792C140.855 46.1792 143.181 45.2074 144.916 43.2637C146.686 41.3201 147.571 38.7517 147.571 35.5586C147.571 32.3308 146.686 29.7624 144.916 27.8534C143.181 25.9098 140.855 24.938 137.94 24.938C134.989 24.938 132.629 25.8924 130.859 27.8014C129.124 29.7103 128.256 32.2961 128.256 35.5586C128.256 38.7864 129.124 41.3722 130.859 43.3158C132.629 45.2247 134.989 46.1792 137.94 46.1792Z" fill="white"/>
+                        <path d="M188.394 29.155C188.394 31.2722 187.909 33.2158 186.937 34.9859C185.965 36.7213 184.472 38.127 182.459 39.2029C180.446 40.2789 177.947 40.8168 174.963 40.8168H169.444V53.9364H160.541V17.389H174.963C177.878 17.389 180.342 17.8923 182.355 18.8988C184.368 19.9053 185.878 21.2936 186.885 23.0637C187.891 24.8339 188.394 26.8643 188.394 29.155ZM174.286 33.7364C175.986 33.7364 177.253 33.3373 178.086 32.539C178.919 31.7407 179.336 30.6127 179.336 29.155C179.336 27.6973 178.919 26.5692 178.086 25.771C177.253 24.9727 175.986 24.5735 174.286 24.5735H169.444V33.7364H174.286Z" fill="white"/>
+                        <path d="M200.89 47.0643H212.552V53.9364H191.988V17.389H200.89V47.0643Z" fill="white"/>
+                        <path d="M224.66 17.389V53.9364H215.757V17.389H224.66Z" fill="white"/>
+                        <path d="M262.765 53.9364H253.863L238.973 31.3936V53.9364H230.07V17.389H238.973L253.863 40.0359V17.389H262.765V53.9364Z" fill="white"/>
+                        <path d="M277.08 24.5215V31.9143H289.002V38.7864H277.08V46.804H290.564V53.9364H268.177V17.389H290.564V24.5215H277.08Z" fill="white"/>
+                        <path d="M326.051 28.0234C326.051 31.1472 325.027 33.6635 322.979 35.5724C320.931 37.4813 317.86 38.4358 313.764 38.4358H306.424V53.9502H302.779V17.559H313.764C317.825 17.559 320.879 18.5135 322.927 20.4224C325.01 22.3313 326.051 24.865 326.051 28.0234ZM313.764 35.3121C319.456 35.3121 322.302 32.8825 322.302 28.0234C322.302 25.5939 321.626 23.7544 320.272 22.5049C318.918 21.2554 316.749 20.6307 313.764 20.6307H306.424V35.3121H313.764Z" fill="white"/>
+                        <path d="M350.491 53.9502L341.485 38.7482H334.769V53.9502H331.124V17.559H342.057C346.118 17.559 349.19 18.5308 351.272 20.4745C353.39 22.4181 354.448 24.9691 354.448 28.1276C354.448 30.7654 353.685 33.0214 352.157 34.8956C350.665 36.7351 348.444 37.9325 345.494 38.4879L354.865 53.9502H350.491ZM334.769 35.7807H342.11C344.956 35.7807 347.09 35.0865 348.513 33.6982C349.971 32.3099 350.7 30.453 350.7 28.1276C350.7 25.7327 350.006 23.8932 348.617 22.609C347.229 21.2901 345.042 20.6307 342.057 20.6307H334.769V35.7807Z" fill="white"/>
+                        <path d="M376.986 54.3147C373.62 54.3147 370.566 53.5337 367.824 51.9719C365.082 50.3753 362.912 48.1714 361.316 45.36C359.754 42.514 358.973 39.3035 358.973 35.7286C358.973 32.1537 359.754 28.9606 361.316 26.1492C362.912 23.3032 365.082 21.0992 367.824 19.5374C370.566 17.9408 373.62 17.1425 376.986 17.1425C380.388 17.1425 383.459 17.9408 386.201 19.5374C388.943 21.0992 391.095 23.3032 392.657 26.1492C394.219 28.9606 395 32.1537 395 35.7286C395 39.3035 394.219 42.514 392.657 45.36C391.095 48.1714 388.943 50.3753 386.201 51.9719C383.459 53.5337 380.388 54.3147 376.986 54.3147ZM376.986 51.1389C379.694 51.1389 382.123 50.5142 384.275 49.2647C386.427 48.0152 388.128 46.2277 389.377 43.9023C390.627 41.5422 391.251 38.8176 391.251 35.7286C391.251 32.6396 390.627 29.9324 389.377 27.6069C388.128 25.2815 386.427 23.4941 384.275 22.2446C382.123 20.9951 379.694 20.3704 376.986 20.3704C374.279 20.3704 371.85 20.9951 369.698 22.2446C367.546 23.4941 365.845 25.2815 364.596 27.6069C363.346 29.9324 362.722 32.6396 362.722 35.7286C362.722 38.8176 363.346 41.5422 364.596 43.9023C365.845 46.2277 367.546 48.0152 369.698 49.2647C371.85 50.5142 374.279 51.1389 376.986 51.1389Z" fill="white"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M70.0001 35.0001C70.0001 54.3301 54.3301 70.0001 35.0001 70.0001C15.6701 70.0001 0 54.3301 0 35.0001C0 15.6701 15.6701 0 35.0001 0C54.3301 0 70.0001 15.6701 70.0001 35.0001ZM19.1817 25.403C19.1675 24.9951 19.4865 24.653 19.8944 24.6387L34.4316 24.1311C34.9503 24.113 35.3256 24.6214 35.1554 25.1118L25.2705 53.6008C25.1704 53.8892 24.9032 54.0864 24.5982 54.097L20.9276 54.2252C20.5197 54.2394 20.1775 53.9204 20.1633 53.5125L19.1817 25.403ZM49.0358 46.5678C49.4437 46.5535 49.7627 46.2114 49.7485 45.8035L48.7669 17.694C48.7526 17.2861 48.4105 16.9671 48.0026 16.9813L44.332 17.1095C44.0269 17.1201 43.7598 17.3173 43.6597 17.6057L33.7748 46.0947C33.6046 46.5851 33.9799 47.0935 34.4986 47.0754L49.0358 46.5678Z" fill="white"/>
+                        <path d="M49.7485 45.8032C49.7627 46.2111 49.4437 46.5533 49.0358 46.5675L34.4986 47.0752C33.9799 47.0933 33.6046 46.5849 33.7748 46.0945L43.6597 17.6055C43.7598 17.317 44.0269 17.1199 44.332 17.1092L48.0026 16.981C48.4105 16.9668 48.7526 17.2859 48.7669 17.6937L49.7485 45.8032Z" fill="white" fill-opacity="0.3"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_1497_36">
+                        <rect width="395" height="70" fill="white"/>
+                        </clipPath>
+                        </defs>
+                        </svg>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</footer>
+
+
+        
     
 
     

@@ -94,7 +94,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/c90b2dc9-624f-4ae3-8d08-1c86f4a2dc2c.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/9ebf823e-faba-47df-a3bd-19232af9af1e.mp4");
       background-size: cover;
   }
   
@@ -2041,7 +2041,8 @@
 
   function getFastQuoteDiv() {
   const fastQuoteDiv = `
-    <form id="contactModal" onsubmit="send_sms('Halo-Roofing-Renovations', 'contact-modal', '+19108501268')" style="height: 316px;" class="fast-quote-div top-0 sticky flex flex-col flex-shrink-0 bg-primary rounded-lg p-4">
+    <div id="error-state-modal-embedded" style="padding-left: 24px; padding-right: 24px;"></div>
+    <form id="embeddedForm" onsubmit="send_sms('Halo-Roofing-Renovations', 'contact-embedded', '+19108501268')" style="height: 316px;" class="fast-quote-div top-0 sticky flex flex-col flex-shrink-0 bg-primary rounded-lg p-4">
       <div class="flex justify-center text-primary-foreground text-2xl font-extrabold">Get a Fast Quote</div>
       <div class="flex flex-col space-y-5 w-full pt-4">
         <input
