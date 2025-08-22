@@ -94,7 +94,7 @@
   
   .all-photos-hero-image {
       background-color: var(--color-primary-foreground);
-      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/9c06cac2-d46d-4fce-b467-e2c8e10556a9.mp4");
+      background-image: url("https://d3p2r6ofnvoe67.cloudfront.net/media/0c5980bb-6017-470f-83b4-b73c4256d5a9.mp4");
       background-size: cover;
   }
   
@@ -644,15 +644,15 @@
 
                     <div class="inline-flex w-full sm:w-auto">
                         
-                        <div onclick="postCtaClick('call')" class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
-                            <a
-                                target = "_blank" 
-                                href="tel:+19108501268"
+                        <div class="inline-flex w-full sm:w-auto hover:scale-110 transition duration-300 ease-in-out">
+                            <button
+                                data-phone="+19108501268" 
+                                onclick="initiateCall(this); postCtaClick('call')"
                                 :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                                 class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white border-2 rounded-md   text-primary border-primary   focus:outline-none focus:ring-0 focus:ring-offset-0 sm:w-auto "
-                                >
+                            >
                                 Call Now
-                            </a>
+                            </button>
                         </div>
                         
                     </div>
@@ -918,15 +918,15 @@
                                 
 
                                 
-                                <div onclick="postCtaClick('call')" class="w-full">
-                                    <a
-                                        target = "_blank"
-                                        href="tel:+19108501268"
+                                <div class="w-full">
+                                    <button
+                                        data-phone="+19108501268" 
+                                        onclick="initiateCall(this); postCtaClick('call')"
                                         :class="{'scale-100': !scrolledFromTop, 'scale-100': scrolledFromTop}"
                                         class="cta_call_conversion inline-flex items-center justify-center w-full px-5 py-3 whitespace-nowrap text-base font-medium transition bg-white rounded-md  hover:bg-primary hover:bg-opacity-10 hover:text-white focus:outline-none focus:ring-2 text-primary my-2"
-                                        >
+                                    >
                                         Call Now
-                                    </a>
+                                    </button>
                                 </div>
                                  
                             
@@ -1261,7 +1261,7 @@ A roof installation can be a significant investment, and it's essential to ensur
                 </div>
                 <div id="error-state-modal" style="padding-left: 24px; padding-right: 24px;"></div>
 
-                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('Halo-Roofing-Renovations', 'contact-modal', '+19108501268')">
+                <form id="contactModal" class="flex flex-col flex-grow overflow-hidden sm:w-full" onsubmit="send_sms('Halo-Roofing-Renovations', 'contact-modal', deobfuscateNumber('+19108501268'))">
                     <div class="flex flex-shrink-1 h-auto overflow-x-hidden overflow-y-auto pb-3">
                         <div class="h-auto px-6 sm:mt-6 space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-4">
                             
@@ -1753,13 +1753,13 @@ A roof installation can be a significant investment, and it's essential to ensur
                         
                     
                     <div onclick="postCtaClick('call')" class="w-full sm:w-auto mr-4 cta_text_button mt-3 sm:mt-0">
-                        <a
-                            target = "_blank" 
-                            href="tel:+19108501268"
+                        <button
+                            data-phone="+19108501268" 
+                            onclick="initiateCall(this); postCtaClick('call')"
                             class="cta_call_conversion flex justify-center relative rounded p-3 sm:px-10 sm:py-4 overflow-hidden group bg-white relative hover:bg-gradient-to-r hover:from-secondary-lighter hover:to-secondary-darker text-secondary hover:ring-2 hover:ring-offset-2 hover:ring-secondary transition-all ease-out duration-300">
                             <span class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-secondary opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
                             <span class="relative">Call Us</span>
-                        </a>
+                        </button>
                     </div>
                     
                 </div>
@@ -2144,7 +2144,7 @@ A roof installation can be a significant investment, and it's essential to ensur
     
 
     
-
+    
     <script>
         window.addEventListener("load", function() {
             setTimeout(function() {
@@ -2154,6 +2154,49 @@ A roof installation can be a significant investment, and it's essential to ensur
             }, 5000);
         });
     </script>
+    
+    <script>
+  /**
+   * Phone number obfuscation to prevent bot scraping
+   * Decodes phone numbers from data attributes and initiates calls
+   */
+  function deobfuscateNumber(number) {
+    const isObfuscated = "False" === "True";
+    if (!isObfuscated) {
+      return number;
+    }
+    const binaryPD = atob(number);
+    const bytesPD = Uint8Array.from(binaryPD, (c) => c.charCodeAt(0));
+    const decodedPD = new TextDecoder("utf-8").decode(bytesPD);
+    const phone = decodedPD.slice(20);
+
+    return phone;
+  }
+
+  function initiateCall(element) {
+    const pref = "tel:";
+
+    try {
+      const pd = element.getAttribute("data-phone");
+      if (!pd) {
+        console.error("No phone number found on element to call");
+        return;
+      }
+      const phone = deobfuscateNumber(pd);
+
+      window.location.href = pref + phone;
+    } catch (error) {
+      console.error("Error:", error);
+
+      // Try calling the phone number
+      const fallbackPhone = element.getAttribute("data-phone");
+      if (fallbackPhone) {
+        window.location.href = pref + fallbackPhone.replace(/[^0-9]/g, "");
+      }
+    }
+  }
+</script>
+
 </body>
 
 </html>
