@@ -25,20 +25,6 @@
     </url>
 
     <url>
-        <loc>https://haloroofingnc.com/service-Residential-Roof-Replacement</loc>
-        <lastmod>2025-09-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
-        <loc>https://haloroofingnc.com/service-Commercial-Roof-Replacement</loc>
-        <lastmod>2025-09-19</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-
-    <url>
         <loc>https://haloroofingnc.com/service-Seamless-Gutter---Gutter-Gaurds</loc>
         <lastmod>2025-09-19</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,6 +33,20 @@
 
     <url>
         <loc>https://haloroofingnc.com/service-Fortified-Roofer</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://haloroofingnc.com/service-Residential-Roof-Replacement</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://haloroofingnc.com/service-Commercial-Roof-Replacement</loc>
         <lastmod>2025-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
