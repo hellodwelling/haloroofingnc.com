@@ -1,0 +1,1 @@
+var E=(e=>(e.TWO_ROW_GRID="two-row-grid",e.CAROUSEL="carousel",e.SINGLE_PHOTO="single-photo",e.LARGE_GRID="large-grid",e.UNEVEN_GRID="uneven-grid",e.VERTICAL_SLIDE="vertical-slide",e.HORIZONTAL_SLIDE="horizontal-slide",e))(E||{});export{E as P};
