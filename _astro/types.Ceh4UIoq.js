@@ -1,0 +1,1 @@
+var N=(A=>(A.CENTER_OVERLAY="center-overlay",A.CHANGING_BACKGROUND_FADING="changing-background-fading",A.CHANGING_BACKGROUND_SLIDING="changing-background-sliding",A.MULTI_MEDIA="multi-media",A.PANORAMA="panorama",A.SPLIT="split",A))(N||{});export{N as C};
