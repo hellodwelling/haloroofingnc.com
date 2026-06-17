@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime.D3GSbgeI.js";import{r as s}from"./index.CQa_v5jP.js";import{M as m}from"./index.modern.DDQ595o-.js";const n=e=>{const[a,r]=s.useState(!1);return s.useEffect(()=>{r(!0)},[]),a?t.jsx(m,{...e}):e.className||e.style?t.jsx("div",{className:e.className,style:e.style,"aria-hidden":"true"}):null};export{n as G};
