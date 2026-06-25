@@ -1,0 +1,1 @@
+const t="_buttonModal_jwbyc_1",o="_header_jwbyc_28",s="_title_jwbyc_33",_="_closeButton_jwbyc_39",n="_body_jwbyc_59",b="_subButtons_jwbyc_63",c="_subButtonItem_jwbyc_72",e="_empty_jwbyc_93",u={buttonModal:t,header:o,title:s,closeButton:_,body:n,subButtons:b,subButtonItem:c,empty:e};export{u as s};
