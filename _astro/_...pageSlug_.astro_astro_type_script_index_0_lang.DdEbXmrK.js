@@ -1,0 +1,1 @@
+import{s as i}from"./siteReviewLinks.3i9298oZ.js";import"./index.De2ii6Pa.js";import"./index.yBjzXJbu.js";const e=document.getElementById("site-review-links-hydration");if(e?.dataset.reviewLinks)try{i.set(JSON.parse(e.dataset.reviewLinks))}catch(t){console.warn("Failed to hydrate site review links",t)}
