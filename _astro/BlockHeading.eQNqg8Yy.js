@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime.D3GSbgeI.js";const j=({order:e,className:r,eyebrow:t,children:o})=>{const n=e===0;if(t){const i=n?"h1":"p";return s.jsxs(s.Fragment,{children:[s.jsx(i,{className:"eyebrow",children:t}),s.jsx("h2",{className:r,children:o})]})}const c=n?"h1":"h2";return s.jsx(c,{className:r,children:o})};export{j as B};
