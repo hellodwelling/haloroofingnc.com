@@ -1,0 +1,1 @@
+import{E as l}from"./EmbeddedInBlock.BYb_wwe7.js";import"./jsx-runtime.D3GSbgeI.js";import"./index.yBjzXJbu.js";import"./PlatformIcon.IsaSeIUD.js";import"./createReactComponent.BhT6w81T.js";import"./index.De2ii6Pa.js";import"./types.DL00tS_N.js";import"./ReviewCard.CkGs7NxH.js";import"./_block_.17e60a0b.BHa1uQi1.js";export{l as default};
