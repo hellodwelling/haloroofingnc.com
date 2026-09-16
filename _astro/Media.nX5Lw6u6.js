@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime.D3GSbgeI.js";import{I as o}from"./Image.BG764G0O.js";const n=({video:e,...r})=>t.jsx("video",{autoPlay:!0,muted:!0,loop:!0,playsInline:!0,...r,children:t.jsx("source",{src:e.src,type:e?.mimeType?e.mimeType:void 0})}),i=({media:e,...r})=>e.mediaType==="image"?t.jsx(o,{image:e,...r}):e.mediaType==="video"?t.jsx(n,{video:e,...r}):null;export{i as M};
