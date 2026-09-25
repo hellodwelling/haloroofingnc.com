@@ -1,0 +1,1 @@
+import{M as a}from"./shared.Btz_rdfT.js";const n=(e,t)=>{const r={};return e?.background&&(r["--color-background"]=e.background),e?.accent&&(r["--color-accent"]=e.accent),t?.mediaType===a.IMAGE&&t?.src&&(r["--background-image-url"]=`url(${t.src})`),r},s=e=>e?`overlay-${e.replace("_","-")}`:"";export{s as a,n as g};

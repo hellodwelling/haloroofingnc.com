@@ -1,0 +1,1 @@
+const t="_buttonModal_sdcr9_1",s="_header_sdcr9_28",o="_title_sdcr9_33",_="_closeButton_sdcr9_39",n="_body_sdcr9_59",c="_subButtons_sdcr9_63",e="_subButtonItem_sdcr9_72",u="_empty_sdcr9_93",d={buttonModal:t,header:s,title:o,closeButton:_,body:n,subButtons:c,subButtonItem:e,empty:u};export{d as s};

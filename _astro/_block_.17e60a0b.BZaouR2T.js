@@ -1,0 +1,1 @@
+const t="_root_2kvgc_18",s="_badge_2kvgc_23",a="_platforms_2kvgc_35",o="_rating_2kvgc_50",_="_ratingValue_2kvgc_54",r="_stars_2kvgc_40",c="_secondary_2kvgc_72",n={root:t,badge:s,platforms:a,rating:o,ratingValue:_,stars:r,secondary:c};export{n as s};

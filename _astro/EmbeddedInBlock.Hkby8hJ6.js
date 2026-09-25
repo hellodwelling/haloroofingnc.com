@@ -1,0 +1,1 @@
+import{E as s}from"./EmbeddedInBlock.CkOYLzeJ.js";import"./jsx-runtime.D3GSbgeI.js";import"./index.yBjzXJbu.js";import"./PlatformIcon.Ds9GpOHM.js";import"./types.DL00tS_N.js";import"./ReviewCard.CKehYdgW.js";import"./index.De2ii6Pa.js";import"./IconStarFilled.DjcsJXYM.js";import"./createReactComponent.BhT6w81T.js";import"./_block_.17e60a0b.BZaouR2T.js";export{s as default};
